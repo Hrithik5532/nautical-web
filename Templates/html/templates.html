@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Mirrored from themetechmount.com/html/aqovo/{% url 'home' %} by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:40:21 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="Aqovo &#8211; Aqua Farm &amp; Fishery Services HTML Template" />
+<meta name="author" content="https://www.themetechmount.com/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NMMS &#8211; {{title}}</title>
+
+<link rel="shortcut icon" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/themify-icons.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/prettyPhoto.css' %}" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/shortcodes.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/megamenu.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+
+<style>
+  
+ .top-nav-custom{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+    grid-template-columns: 1fr auto 1fr;
+
+ }  
+</style>
+
+</head>
+
+
+<body >
+
+    <!--page start-->
+    <div class="page">
+
+       
+        {% comment %} <div id="preloader" class="blobs-wrapper">
+            <div class="ttm-bgcolor-skincolor loader-blob"></div>
+        </div> {% endcomment %}
+
+        
+        {% for message in messages %}
+            <div class="container-fluid p-0 ">
+                <div class="alert {{ message.tags }} alert-dismissible d-flex justify-content-center " role="alert" >
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="True">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-01">
+
+            <!-- topbar -->
+            <div class="top_bar ttm-bgcolor-darkgrey text-center clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="top_bar_contact_item top-nav-custom">
+                               <!-- header_social -->
+                               <div style="display: flex;justify-content:start;text-align:center">
+
+                                   <a class="home-link mt-2" href="{% url 'home' %}" >
+                                       <img id="logo-img" height="50" width="60" class="img-fluid auto_size" src="{% static 'custom-images/logo.png' %}" alt="logo-img">
+                                       
+                                    </a>
+                                    <div class="d-flex mt-3 " style="flex-direction: column;
+                                    text-align: justify;">
+
+                                        <h6 class="m-0">Nautical Marine </h6>
+                                        <h6 class="m-0">Management </h6>
+                                        <h6>Services</h6>
+                                    </div>
+                                </div>
+
+                                      <span>Call Now +9876543210</span>
+
+
+                                    <ul class="social-icons list-inline top-social-icons " style="display: flex;justify-content:flex-end;">
+                                      
+
+                                        <li class="f-icon top-share-icon "><a class="tooltip-top text" href="#" rel="noopener" ><i class="fa fa-facebook"></i></a></li>
+                                        <li class="top-share-icon"><a class="tooltip-top" href="#" rel="noopener" ><i class="fa fa-twitter"></i></a></li>
+                                        <li class="top-share-icon" ><a class="tooltip-top" href="#" rel="noopener" ><i class="fa fa-flickr"></i></a></li>
+                                        <li class="top-share-icon" ><a class="tooltip-top" href="#" rel="noopener" ><i class="fa fa-linkedin"></i></a></li>
+
+                                    </ul>
+
+                                <!-- header_social end-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- topbar end -->
+
+            <!-- site-header-menu -->
+            <div id="site-header-menu" class="site-header-menu">
+                <div class="site-header-menu-inner ttm-stickable-header">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-12 p-0" >
+                                <!--site-navigation -->
+                                <div class="site-navigation d-flex align-items-center justify-content-between">
+                                    
+                                    <div >
+                                        <div class="d-flex align-items-center justify-content-between">
+                                           
+                                            <!-- menu -->
+                                            <nav class="main-menu menu-mobile" id="menu">
+                                                <ul class="menu">
+                                                    <li class="mega-menu-item " id ='Home'>
+                                                        <a href="{% url 'home' %}" class="mega-menu-link">Home</a>
+                                                      
+                                                    </li>
+                                              
+                                                   
+                                                    <li class="mega-menu-item" id="About Us">
+                                                        <a href="#" class="mega-menu-link">About Us</a>
+                                                        {% comment %} <ul class="mega-submenu">
+                                                            <li><a href="project-style-01.html">Projects Style One</a></li>
+                                                            <li><a href="project-style-02.html">Projects Style Two</a></li>
+                                                            <li><a href="portfolio-single.html">Project Single View</a></li>
+                                                        </ul> {% endcomment %}
+                                                    </li>
+
+                                                    <li class="mega-menu-item" id='Services'>
+                                                        <a href="{% url 'services' %}" class="mega-menu-link">Services</a>
+                                                    
+                                                    </li>
+                                                    <li class="mega-menu-item" id="Articles">
+                                                        <a href="{% url 'articles' %}" class="mega-menu-link">Articles</a>
+                                                        {% comment %} <ul class="mega-submenu">
+                                                            <li><a href="blog.html">Blog Classic</a></li>
+                                                            <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                                            <li><a href="blog-single.html">Blog Single View</a></li>
+                                                        </ul> {% endcomment %}
+                                                    </li>
+                                                    <li class="mega-menu-item" id="Contact Us">
+                                                        <a href="{% url 'contact_us' %}">Contact us</a>
+                                                    </li>
+                                                </ul>
+                                            </nav><!-- menu end -->
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- header_extra - Search Button -->
+                                    {% comment %} <div class="header_extra d-flex flex-row align-items-center ml-auto mr-3">
+                                                <div class="header_search">
+                                                    <a href="#" class="btn-default search_btn ttm-bgcolor-skincolor"><i class="fa fa-search"></i></a>
+                                                    <div class="header_search_content">
+                                                        <div class="header_search_content_inner">
+                                                            <a href="#" class="close_btn"><i class="ti ti-close"></i></a>
+                                                            <p class="margin_bottom20">What are you looking for?</p>
+                                                            <form id="searchbox" method="get" action="#">
+                                                                <input class="search_query" type="text" id="search_query_top" name="s" placeholder="Enter Keyword" value="">
+                                                                <button type="submit" class="btn close-search"><i class="ti ti-search"></i></button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                
+                                            </div><!-- header_extra end --> 
+                                    {% endcomment %}
+                                    <div class="header_btn"><a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">Get A Quotes!</a></div>
+                                </div><!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- site-header-menu end-->
+        </header><!--header end-->
+
+        {% block body %}{% endblock body%}
+
+
+
+
+        <!--footer start-->
+        <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+            <div class="second-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_text clearfix">
+                                <div class="footer-logo">
+                                    <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170" src="images/footer-logo.svg" alt="image">
+                                </div>
+                                <div class="textwidget widget-text">
+                                    <p>At the Aqovo, our mission is to promote aquaculture practices. For over 30 years, Aqovo have demonstrated commitment to responsible aquaculture.</p>
+                                    <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="contact-us.html">Make a appointment <i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
+                            <div class="widget widget_nav_menu clearfix">
+                               <h3 class="widget-title">Links</h3>
+                               <ul id="menu-footer-quick-links" class="menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our CLinic</a></li>
+                                    <li><a href="#">Our Doctors</a></li>
+                                    <li><a href="#">News & Media</a></li>
+                                    <li><a href="#">Appointments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_img_gellary clearfix">
+                               <h3 class="widget-title">Our Gallery</h3>
+                                <ul>
+                                    <li><a href="images/portfolio/portfolio-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/services/services-05-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/services/services-05-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-03-1200x800.jpg"  rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-03-150x150.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+                            <div class="widget widget_cta clearfix">
+                                <h3 class="widget-title">Quick Contacts</h3>
+                                <p>If you have any questions or need help</p>
+                                <div class="d-flex">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
+                                        <i class="flaticon flaticon-call"></i>
+                                    </div>
+                                    <h4>+123 456 7890</h4>
+                                </div>
+                                <p>2307 Beverley Rd Brooklyn, New York 11226 United States.</p>
+                                <div class="d-inline-table align-items-center justify-content-between">
+                                    <a class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5" href="contact-us.html">Get direction <i class="fa fa-chevron-right"></i></a>
+                                    <div class="social-icons d-inline-block margin_top10 margin_bottom10">
+                                        <ul class="social-icons list-inline">
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="instagram" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer-text copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="d-md-flex justify-content-between">
+                                <span class="cpy-text">Copyright © 2021 <a href="#" class="ttm-textcolor-skincolor font-weight-500">Aqovo </a> All rights reserved.</span>
+                                <ul class="footer-nav-menu">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-us.html">services</a></li>
+                                    <li><a href="contact-us.html">Privcy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->
+
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
+
+</div><!-- page end -->
+
+    <script>
+        document.getElementById('{{title}}').classList.add('active');
+    </script>
+
+    <!-- Javascript -->
+    {% block jscript %}
+    
+    {% endblock jscript %}
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.3.2.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.easing.js' %}"></script> 
+    <script src="{% static 'js/jquery-waypoints.js' %}"></script>    
+    <script src="{% static 'js/jquery-validate.js' %}"></script> 
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/numinate.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'js/jquery-isotope.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- Javascript end-->
+
+</body>
+
+<!-- Mirrored from themetechmount.com/html/aqovo/{% url 'home' %} by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:40:47 GMT -->
+</html>

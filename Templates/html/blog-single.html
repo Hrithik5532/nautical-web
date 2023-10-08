@@ -1,0 +1,202 @@
+{% extends "html/templates.html" %}
+
+{% block body %}
+
+
+        <!-- page-title -->
+        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
+            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="ttm-page-title-row-inner">
+                            <div class="page-title-heading">
+                                <h2 class="title">{{article.name}}</h2>
+                            </div>
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="{% url 'home' %}">Home</a>
+                                </span>
+                                <span>Blog</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+        <!-- page-title end -->
+
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        
+        <div class="ttm-row sidebar ttm-sidebar-right clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-8 content-area">
+                        <!-- post --><article class="post ttm-blog-single clearfix">
+                             <!-- post-featured-wrapper -->
+                            <div class="ttm-post-featured-wrapper ttm-featured-wrapper">
+                                <div class="ttm-post-featured">
+                                    <img class="img-fluid" src="images/blog/blog-01-1200x800.jpg" alt="">
+                                </div>
+                            </div><!-- post-featured-wrapper end -->
+                            <!-- ttm-blog-classic-content -->
+                            <div class="ttm-blog-single-content">
+                                <div class="ttm-post-entry-header">
+                                    <div class="post-meta">
+                                        <span class="ttm-meta-line byline"><i class="fa fa-user"></i>{{article.writer}}</span>
+                                        <span class="ttm-meta-line category"><i class="fa fa-folder"></i>{{article.category.name}}</span>
+                                        <span class="ttm-meta-line date"><i class="fa fa-calendar"></i>{{article.created_at | date:"d,M Y"}}</span>
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <div class="ttm-box-desc-text">
+                                        
+                                        {{article.content | safe}}
+                                        <div class="social-media-block">
+                                            <div class="d-sm-flex justify-content-between align-items-center">
+                                                <div class="ttm_tag_lists margin_top15">
+                                                    <span class="ttm-tags-links-title ttm-textcolor-darkgrey"><i class="fa fa-tags"></i>Tags:</span>
+                                                    <span class="ttm-tags-links">{% for tag in article.tags.all %}
+                                                    
+                                                   <a href="{% url 'articles' %}?tag={{tag.name}}">{{tag.name}}</a> {% endfor %}</span>
+                                                </div>
+                                                <div class="ttm-social-share-wrapper margin_top15">
+                                                    <h6 class="fs-16 m-0 font-weight-normal padding_right10">Share : </h6>
+                                                    <ul class="social-icons">
+                                                        <li>
+                                                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ blog_post_url }}" target="_blank">
+                                                                <i class="fa fa-facebook"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://twitter.com/intent/tweet?url={{ blog_post_url }}" target="_blank">
+                                                                <i class="fa fa-twitter"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://plus.google.com/share?url={{ blog_post_url }}" target="_blank">
+                                                                <i class="fa fa-google-plus"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.linkedin.com/shareArticle?url={{ blog_post_url }}" target="_blank">
+                                                                <i class="fa fa-linkedin"></i>
+                                                            </a>
+                                                        </li>
+                                                        <!-- Add similar links for other social media platforms -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- ttm-blog-classic-content end -->
+                            {% comment %} <div class="ttm-blog-classic-box-comment clearfix">
+                                <div id="comments" class="comments-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title">Leave a Reply</h3>
+                                        <p class="comment-notes">Your email address will not be published. </p>
+                                        <form action="#" method="post" id="commentform" class="comment-form">
+                                            <p class="comment-form-comment">
+                                                <textarea id="comment" placeholder="Comment" name="comment" cols="45" rows="7" aria-required="true"></textarea>
+                                            </p>
+                                            <p class="comment-form-author">
+                                                <input id="author" placeholder="Name (required)" name="author" type="text" value="" size="30" aria-required="true">
+                                            </p>
+                                            <p class="comment-form-email">
+                                                <input id="email" placeholder="Email (required)" name="email" type="text" value="" size="30" aria-required="true">
+                                            </p>
+                                            <p class="comment-form-url">
+                                                <input id="url" placeholder="Website" name="url" type="text" value="" size="30">
+                                            </p>
+                                            <p class="comment-cookies">
+                                                <input id="comment-cookies-consent" name="comment-cookies-consent" type="checkbox" value="yes">
+                                                <label for="comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                            </p>
+                                            <p class="form-submit margin_top30 margin_bottom0">
+                                                <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" type="submit">Post Comment</button>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> {% endcomment %}
+                        </article><!-- post end -->
+                    </div>
+                    <div class="col-lg-4 widget-area sidebar-right">
+                        <aside class="widget widget-search with-title">
+                            <form role="search" method="GET" class="search-form" action="{% url 'articles' %}">
+                                <label>
+                                <span class="screen-reader-text">Search for:</span>
+                                <input type="search" class="input-text" placeholder="Search …" value="" name="search">
+                                </label>
+                                <button class="btn ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit"><i class="fa fa-search"></i> </button>
+                            </form>
+                        </aside>
+                        <aside class="widget widget-categories with-title">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul>
+                                {% for i in categories %}
+                                
+                                <li><a href="{% url 'articles' %}?category={{i.name}}">{{i.name}}</a></li>
+                                {% endfor %}
+                                
+                            </ul>
+                        </aside>
+                        <aside class="widget widget-recent-post with-title">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            <ul class="widget-post ttm-recent-post-list">
+                                {% for i in articles %}
+                                
+                                <li>
+                                    <a href="blog-single.html"><img class="img-fluid" src="../../media/{{i.thumbnail}}" alt="post-img"></a>
+                                    <div class="post-detail">
+                                        <span class="post-date"><i class="fa fa-calendar"></i>{{i.created_at|date:"d,M Y"}}</span>
+                                        <a href="blog-single.html">{{i.name}}</a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                         
+                            </ul>
+                        </aside>
+                        <aside class="widget tagcloud-widget with-title">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tagcloud">
+                                {% for i in tags %}
+                                
+                                <a href="{% url 'articles' %}?tag={{i.name}}" class="tag-cloud-link">{{i.name}}</a>
+                                {% endfor %}
+                               
+                            </div>
+                        </aside>
+                        <aside class="widget widget-banner with-title">
+                           <div class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                    <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                </div>
+                                <div class="layer-content text-center">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-style-round ttm-icon_element-color-skincolor ttm-icon_element-size-xl">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <h3>Do You Need Any Help?</h3>
+                                    <div class="ttm-horizontal_sep width-100 margin_top20 margin_bottom20"></div>
+                                    <ul>
+                                        <li>+1 800 556 77 894</li>
+                                        <li>info@yourmailexample.com</li>
+                                    </ul>
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">appoinments!</a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div><!-- row end -->
+            </div>
+        </div>
+
+
+    </div><!--site-main end-->
+
+    {% endblock body %}

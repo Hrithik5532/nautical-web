@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themetechmount.com/html/aqovo/header-infostack.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:41:20 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="HTML5 Template" />
+<meta name="description" content="Aqovo &#8211; Aqua Farm &amp; Fishery Services HTML Template" />
+<meta name="author" content="https://www.themetechmount.com/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aqovo &#8211; Aqua Farm &amp; Fishery Services HTML Template </title>
+
+<link rel="shortcut icon" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/flaticon.css"/>
+<link rel="stylesheet" type="text/css" href="css/themify-icons.css"/>
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="css/shortcodes.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/megamenu.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+
+</head>
+
+
+<body>
+
+    <!--page start-->
+    <div class="page">
+        
+       
+        <div id="preloader" class="blobs-wrapper">
+            <div class="ttm-bgcolor-skincolor loader-blob"></div>
+        </div>
+
+        
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-03">
+            
+            <div class="widget_header_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <!-- site-branding -->
+                            <div class="site-branding ">
+                                <a class="home-link" href="{% url 'home' %}" title="Aqovo" rel="home">
+                                    <img id="logo-img" height="50" width="132" class="img-fluid auto_size" src="{% static 'custom-images/logo.png' %}" alt="logo-img">
+                                </a>
+                            </div><!-- site-branding end -->
+                        </div>
+                        <div class="col-xl-10">
+                            <!-- ttm-widget-header -->
+                            <div class="ttm-widget_header d-flex flex-row align-items-center justify-content-end">
+                                <!-- widget-info -->
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i class="flaticon flaticon-call"></i></div>
+                                    <div class="widget_content">
+                                        <h3 class="widget_title">Telephone</h3>
+                                        <h5>+123 795 9841</h5>
+                                    </div>
+                                </div><!-- widget-info end -->
+                                <!-- widget-info -->
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i class="flaticon flaticon-email"></i></div>
+                                    <div class="widget_content">
+                                        <h3 class="widget_title">Email Us</h3>
+                                        <h5>info@example.com</h5>
+                                    </div>
+                                </div><!-- widget-info end -->
+                                <!-- widget-info -->
+                                <div class="widget_info d-flex flex-row align-items-center justify-content-end">
+                                    <div class="widget_icon ttm-textcolor-skincolor"><i class="flaticon flaticon-location"></i></div>
+                                    <div class="widget_content">
+                                        <h3 class="widget_title">Our Location</h3>
+                                        <h5>650 Broklyn Golden Street USA</h5>
+                                    </div>
+                                </div><!-- widget-info end -->
+                            </div><!-- ttm-widget-header end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-header-menu" class="site-header-menu">
+                <div class="site-header-menu-inner ttm-stickable-header ttm-bgcolor-skincolor">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <!--site-navigation -->
+                                <div id="site-navigation" class="site-navigation">
+                                    <div class="site-navigation-content ttm-bgcolor-skincolor d-flex flex-row">
+                                        <div class="btn-show-menu-mobile menubar menubar--squeeze">
+                                            <span class="menubar-box">
+                                                <span class="menubar-inner"></span>
+                                            </span>
+                                        </div>
+                                        <nav class="main-menu menu-mobile" id="menu">
+                                            <ul class="menu">
+                                                <li class="mega-menu-item active">
+                                                    <a href="#" class="mega-menu-link">Home</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="{% url 'home' %}">Home One</a></li>
+                                                        <li><a href="home-2.html">Home Two</a></li>
+                                                        <li><a href="home-3.html">Home Three</a></li>
+                                                        <li class="mega-menu-item active">
+                                                            <a href="#" class="mega-menu-link">Header Styles</a>
+                                                            <ul class="mega-submenu">
+                                                                <li><a href="{% url 'home' %}">Header Classic</a></li>
+                                                                <li><a href="header-overlay.html">Header Overlay</a></li>
+                                                                <li class="active"><a href="header-infostack.html">Header Infostack</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Pages</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="about-us.html">About Us One</a></li>
+                                                        <li><a href="about-us-2.html">About Us Two</a></li>
+                                                        <li><a href="services-1.html">Services One</a></li>
+                                                        <li><a href="services-2.html">Services Two</a></li>
+                                                        <li><a href="our-team.html">Our Team</a></li>
+                                                        <li><a href="team-details.html">Team Details</a></li>
+                                                        <li><a href="faq.html">F.A.Q</a></li>
+                                                        <li><a href="error.html">Error Page</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Services</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="prawn-feeds.html">Prawn Feeds</a></li>
+                                                        <li><a href="flowerhorn-fish.html">Flowerhorn Fish</a></li>
+                                                        <li><a href="hatchery-supply.html">Hatchery Supply</a></li>
+                                                        <li><a href="aquatic-plants.html">Aquatic Plants</a></li>
+                                                        <li><a href="green-care.html">Green Care</a></li>
+                                                        <li><a href="water-changes.html">Water Changes</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Projects</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="project-style-01.html">Projects Style One</a></li>
+                                                        <li><a href="project-style-02.html">Projects Style Two</a></li>
+                                                        <li><a href="portfolio-single.html">Project Single View</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Blog</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="blog.html">Blog Classic</a></li>
+                                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                                        <li><a href="blog-single.html">Blog Single View</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="contact-us.html">Contact us</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="header_extra d-flex flex-row align-items-center ml-auto">
+                                            <!-- header_search -->
+                                            <div class="header_extra d-flex flex-row align-items-center ml-auto">
+                                                <div class="header_search">
+                                                    <a href="#" class="btn-default search_btn ttm-bgcolor-darkgrey"><i class="fa fa-search"></i></a>
+                                                    <div class="header_search_content">
+                                                        <div class="header_search_content_inner">
+                                                            <a href="#" class="close_btn"><i class="ti ti-close"></i></a>
+                                                            <p class="margin_bottom20">What are you looking for?</p>
+                                                            <form id="searchbox" method="get" action="#">
+                                                                <input class="search_query" type="text" id="search_query_top" name="s" placeholder="Enter Keyword" value="">
+                                                                <button type="submit" class="btn close-search"><i class="ti ti-search"></i></button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="header_cart">
+                                                    <a href="#" class="cart_btn border-white">
+                                                        <div class="cart_icon"><i class="fa fa-shopping-cart"></i></div>
+                                                        <div class="cart_count ttm-bgcolor-white ttm-textcolor-skincolor">0</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- header_search end-->
+                                            <a href="contact-us.html" class="ttm-btn ttm-btn-size-md ttm-btn-style-fill ttm-btn-shape-rounded ttm-btn-color-dark">get a free quotes!</a>
+                                        </div>
+                                    </div>
+                                </div><!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!--header end-->
+
+
+        <!-- Banner -->
+        <div class="banner_slider_wrapper">
+            <div class="banner_slider banner_slider_2">
+                <div class="slide">
+                    <div class="slide_img" style="background-image: url(images/slides/slider-mainbg-003.jpg);"></div>
+                    <div class="slide__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="slide__content--headings text-center">
+                                        <div >
+                                        <h3  data-animation="fadeInDown">
+                                            <span class="num">01</span>
+                                            <span>Fishing makes me crazy</span>
+                                        </h3></div>
+                                        <h2  data-animation="fadeInDown">Fishingtastic!</h2>
+                                        <div class="margin_top40 res-767-margin_top30 margin_bottom60 res-991-margin_bottom0" data-animation="fadeInUp" data-delay="1.4">
+                                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">contact us!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_img" style="background-image: url(images/slides/slider-mainbg-004.jpg);"></div>
+                    <div class="slide__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="slide__content--headings text-center">
+                                        <h3  data-animation="fadeInDown">
+                                            <span class="num">02</span>
+                                            <span>Let there be fishing</span>
+                                        </h3>
+                                        <h2  data-animation="fadeInDown">Fishing for you</h2>
+                                        <div class="margin_top40 res-767-margin_top30 margin_bottom60 res-991-margin_bottom0" data-animation="fadeInUp" data-delay="1.4">
+                                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">Explore More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner end-->
+
+    
+        <!--site-main start-->
+        <div class="site-main">
+
+
+            <!--padding_zero-section-->
+            <section class="ttm-row padding_zero-section clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row mt_60 res-991-margin_top0 mb_15">
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <!--featured-icon-box-->
+                                    <div class="featured-icon-box style3 ttm-bgcolor-white">
+                                        <div class="featured-content">
+                                            <div class="featured-desc">
+                                                <p>Rules Of Aquafarm</p>
+                                            </div>
+                                            <div class="featured-title">
+                                                <h3>Aquafarm Business Responsibility</h3>
+                                            </div>
+                                        </div>
+                                    </div><!-- featured-icon-box end-->
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <!--featured-icon-box-->
+                                    <div class="featured-icon-box style3 ttm-bgcolor-darkgrey">
+                                        <div class="featured-content">
+                                            <div class="featured-desc">
+                                                <p class="ttm-textcolor-skincolor">New Improvements</p>
+                                            </div>
+                                            <div class="featured-title">
+                                                <h3>Innovative Farming Solutions</h3>
+                                            </div>
+                                        </div>
+                                    </div><!-- featured-icon-box end-->
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <!--featured-icon-box-->
+                                    <div class="featured-icon-box style3 ttm-bgcolor-white">
+                                        <div class="featured-content">
+                                            <div class="featured-desc">
+                                                <p>Quality Services</p>
+                                            </div>
+                                            <div class="featured-title">
+                                                <h3>Skilled & Professional Contractors</h3>
+                                            </div>
+                                        </div>
+                                    </div><!-- featured-icon-box end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </section>
+            <!--padding_zero-section-->
+
+
+            <section class="ttm-row about-section bg-layer-equal-height clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <!-- col-img-img-three -->
+                            <div class="ttm-bg ttm-col-bgimage-yes col-bg-img-three ttm-left-span z-index-2">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                <div class="layer-content">
+                                </div>
+                            </div><!-- col-img-bg-img-three end-->
+                            <img class="img-fluid ttm-equal-height-image" src="images/bg-image/col-bgimage-3.jpg" alt="bg-image">
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-skincolor spacing-4 z-index-2 h-auto">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                <div class="layer-content">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-3 col-sm-6 col-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style4 icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-fish-1"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Prawn Feeds</h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-3 col-sm-6 col-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style4 icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-fish-2"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Hand Fishing</h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-3 col-sm-6 col-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style4 icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-soup"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Spear Fishing</h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-icon-box end-->
+                                        </div>
+                                        <div class="col-lg-12 col-md-3 col-sm-6 col-6">
+                                            <!--featured-icon-box-->
+                                            <div class="featured-icon-box icon-align-top-content style4 icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                        <i class="flaticon flaticon-pier"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Boat Fishing</h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-icon-box end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <div class="d-flex flex-column justify-content-center h-100 res-991-padding_top40">
+                                <!-- section title -->
+                                <div class="section-title">
+                                    <div class="title-header">
+                                        <h3>ABOUT US</h3>
+                                        <h2 class="title">Complete Destination For Aqua farming</h2>
+                                    </div>
+                                    <div class="title-desc">
+                                        <p>Aqovo is a United States based aquaculture consulting company that provides aqua project management services worldwide.</p>
+                                        <p>We are in the significant opportunities for water and wastewater treatment contracts within our Aqua division, as well as products and systems for land-based farming, industry and fisheries.</p>
+                                    </div>
+                                </div><!-- section title end -->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey fs-15">
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">We Serving Up Seaweed</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey fs-15">
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">New Options From Startups</span></li>
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Taking Aquaculture Further</span></li>
+                                            <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Tackling a Seafood Deficit</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="margin_top30">
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" href="contact-us.html">contact us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </section>
+
+
+            <!--service-section-->
+            <section class="ttm-row service-section ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- section-title -->
+                            <div class="section-title title-style-center_text">
+                                <div class="title-header">
+                                    <h3>our best services!</h3>
+                                    <h2 class="title">Fish Farming Starts With Us</h2>
+                                </div>
+                                <div class="title-desc">
+                                    <p>The world’s foremost engineering company for the design of offshore fish farms since,1997! It involves raising fish commercially in tanks.</p>
+                                </div>
+                            </div><!-- section-title end -->
+                        </div>
+                    </div>
+                    <!-- row end -->
+                    <div class="row slick_slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1100,"settings":{"slidesToShow": 3}} , {"breakpoint":940,"settings":{"slidesToShow": 2}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                        <div class="col-md-4 col-sm-6">
+                            <!--featured-imagebox-->
+                            <div class="featured-imagebox featured-imagebox-services style2">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a href="prawn-feeds.html"> <img class="img-fluid" src="images/services/services-01-670x400.jpg" alt="image"></a>
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3><a href="prawn-feeds.html">Prawn Feeds</a></h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>The farming aspect of the aqua farming implies an intervention enhance production.</p>
+                                    </div>
+                                    <div class="bottom-footer">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark btn-inline" href="prawn-feeds.html">view more<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!--featured-imagebox-->
+                            <div class="featured-imagebox featured-imagebox-services style2">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a href="flowerhorn-fish.html" tabindex="-1"> <img class="img-fluid" src="images/services/services-02-670x400.jpg" alt="image"></a>
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3><a href="flowerhorn-fish.html">Flowerhorn Fish</a></h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>It is considered one of the most profitable in export value in the fish farming industry and always helpful.</p>
+                                    </div>
+                                    <div class="bottom-footer">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark btn-inline" href="flowerhorn-fish.html">view more<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!--featured-imagebox-->
+                            <div class="featured-imagebox featured-imagebox-services style2">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a href="hatchery-supply.html"> <img class="img-fluid" src="images/services/services-03-670x400.jpg" alt="image"></a>
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3><a href="hatchery-supply.html">Hatchery Supply</a></h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Hatchery includes fish graders, shipping supplies to spawning & handling a many container world wide.</p>
+                                    </div>
+                                    <div class="bottom-footer">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark btn-inline" href="hatchery-supply.html">view more<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!--featured-imagebox-->
+                            <div class="featured-imagebox featured-imagebox-services style2">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a href="aquatic-plants.html"> <img class="img-fluid" src="images/services/services-04-670x400.jpg" alt="image"></a>
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3><a href="aquatic-plants.html">Aquatic Plants</a></h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>We identify a short-list of productivity, collaboration, project management &  feedback...</p>
+                                    </div>
+                                    <div class="bottom-footer">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark btn-inline" href="aquatic-plants.html">view more<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <!--featured-imagebox-->
+                            <div class="featured-imagebox featured-imagebox-services style2">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <a href="green-care.html"><img class="img-fluid" src="images/services/services-05-670x400.jpg" alt="image"></a>
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="featured-title">
+                                        <h3><a href="green-care.html">Green Care</a></h3>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>The farming aspect of the aqua farming implies an intervention enhance production.</p>
+                                    </div>
+                                    <div class="bottom-footer">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark btn-inline" href="green-care.html">view more<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+                    </div><!-- row end -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="margin_top30">Logistic & Transport Solutions Saves Your Time. <strong><a class="ttm-btn btn-inline ttm-icon-btn-right ttm-btn-color-skincolor text-capitalize" href="services-1.html">Find your solution <i class="fa fa-arrow-circle-right pr-1"></i></a></strong></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--service-section end -->
+
+
+            <!--padding_zero-section-->
+            <section class="ttm-row padding_zero-section bg-img3 bg-layer-equal-height clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <div class="padding_top90 padding_bottom30 res-991-padding_top60">
+                                        <!-- section title -->
+                                        <div class="section-title">
+                                            <div class="title-header">
+                                                <h3>about us</h3>
+                                                <h2 class="title">We Make You Healthy With Healthy Fishes</h2>
+                                            </div>
+                                            <div class="title-desc">
+                                                <p>We gained extensive experience in international trade by creating collaborations and commercial exchanges on all continents. We have participated in several aquaculture projects.</p>
+                                            </div>
+                                        </div><!-- section title end -->
+                                        <div class="row ttm-vertical_sep">
+                                            <div class="col-sm-6">
+                                                <div class="margin_top20 margin_bottom20">
+                                                    <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor fs-15">
+                                                        <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Seafood Distribution</span></li>
+                                                        <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Aquaculture Production</span></li>
+                                                        <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Seafood Processing</span></li>
+                                                        <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Import Export Seafood</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <h5>Sam Martin</h5><span class="ml-1"> - Ceo Aqau</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <!-- ttm-fid -->
+                                                <div class="ttm-fid inside ttm-fid-view-circle-progress ttm-fid-with-border">
+                                                    <div class="ttm-fid-contents">
+                                                        <div class="ttm-circle-box"
+
+                                                            data-digit          = "80"
+                                                            data-fill           = "#009599"
+                                                            data-before         = ""
+                                                            data-before-type    = "sup"
+                                                            data-after          = "%"
+                                                            data-after-type     = "span"
+                                                            data-size           = "105"
+                                                            data-emptyfill      = "#20292f"
+                                                            data-thickness      = "5"
+                                                            data-linecap        = "round"
+                                                            data-gradient       = ""
+                                                            >
+                                                            <div class="ttm-circle-content">
+                                                                <div class="ttm-circle"></div>
+                                                                <div class="ttm-circle-boxcontent"><div class="ttm-fid-number ttm-textcolor-darkgrey"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="ttm-fid-title">Client Satisfied</h3>
+                                                    </div>
+                                                </div><!-- ttm-fid end -->
+                                                <!-- ttm-fid-->
+                                                <div class="ttm-fid inside ttm-fid-view-circle-progress ttm-fid-with-border">
+                                                    <div class="ttm-fid-contents">
+                                                        <div class="ttm-circle-box"
+
+                                                            data-digit          = "90"
+                                                            data-fill           = "#009599"
+                                                            data-before         = ""
+                                                            data-before-type    = "sup"
+                                                            data-after          = "%"
+                                                            data-after-type     = "span"
+                                                            data-size           = "105"
+                                                            data-emptyfill      = "#20292f"
+                                                            data-thickness      = "5"
+                                                            data-gradient       = ""
+                                                            >
+                                                            <div class="ttm-circle-content">
+                                                                <div class="ttm-circle">
+                                                                    <div class="ttm-circle-boxcontent"><div class="ttm-fid-number ttm-textcolor-darkgrey"></div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="ttm-fid-title">Project Completed</h3>
+                                                   </div>
+                                               </div>
+                                                <!-- ttm-fid end -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12">
+                                    <!-- col-img-img-four -->
+                                    <div class="ttm-bg ttm-col-bgimage-yes col-bg-img-four z-index-2 mr_100 margin_left30">
+                                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                        <div class="layer-content"></div>
+                                    </div><!-- col-img-bg-img-four end-->
+                                    <img class="img-fluid ttm-equal-height-image w-100" src="images/bg-image/col-bgimage-4.jpg" alt="bg-image">
+                                </div>
+                                <div class="col-lg-1 col-md-12">
+                                    <!-- col-img-img-five -->
+                                    <div class="ttm-bg ttm-col-bgimage-yes col-bg-img-five ttm-right-span mt_60 ml_70">
+                                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                        <div class="layer-content"></div>
+                                    </div><!-- col-img-bg-img-five end-->
+                                </div>
+                            </div><!-- row end -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--padding_zero-section end-->
+
+
+            <!--only_title-section-->
+            <section class="ttm-row only_title-section clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- section-title -->
+                            <div class="section-title title-style-center_text">
+                                <div class="title-header">
+                                    <h3>how it works!</h3>
+                                    <h2 class="title">Aquafarm Working Process</h2>
+                                </div>
+                                <div class="title-desc"><p>At Aqovo, We completely following the strict and hygienic process for the aqua farming and service worldwide</p></div>
+                            </div><!-- section-title end -->
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </section>
+            <!--only_title-section end-->
+
+
+            <!--padding_top_zero-section-->
+            <section class="ttm-row padding_top_zero-section ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-white spacing-5">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                <div class="layer-content">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <!-- featured-imagebox -->
+                                            <div class="featured-imagebox featured-imagebox-procedure">
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="images/process-01.jpg" alt="image">
+                                                    <div class="process-num"></div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-desc">
+                                                        <p>AQUA FARM</p>
+                                                    </div>
+                                                    <div class="featured-title">
+                                                        <h3><a href="services-1.html">Our Mission</a></h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-imagebox end-->
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <!-- featured-imagebox -->
+                                            <div class="featured-imagebox featured-imagebox-procedure">
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="images/process-02.jpg" alt="image">
+                                                    <div class="process-num"></div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-desc">
+                                                        <p>PRAWN FARM</p>
+                                                    </div>
+                                                    <div class="featured-title">
+                                                        <h3><a href="prawn-feeds.html">Our Vission</a></h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-imagebox end-->
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <!-- featured-imagebox -->
+                                            <div class="featured-imagebox featured-imagebox-procedure">
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="images/process-03.jpg" alt="image">
+                                                    <div class="process-num"></div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-desc">
+                                                        <p>AQUATIC</p>
+                                                    </div>
+                                                    <div class="featured-title">
+                                                        <h3><a href="aquatic-plants.html">Our Goals</a></h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-imagebox end-->
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                                            <!-- featured-imagebox -->
+                                            <div class="featured-imagebox featured-imagebox-procedure">
+                                                <div class="featured-thumbnail">
+                                                    <img class="img-fluid" src="images/process-04.jpg" alt="image">
+                                                    <div class="process-num"></div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-desc">
+                                                        <p>GREEN FARM</p>
+                                                    </div>
+                                                    <div class="featured-title">
+                                                        <h3><a href="green-care.html">Our Plans</a></h3>
+                                                    </div>
+                                                </div>
+                                            </div><!-- featured-imagebox end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="padding_top90 res-991-padding_top40 mt_5 mb_5">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style5">
+                                            <div class="featured-icon">
+                                                <div class="ttm-num"><span class="number ttm-textcolor-darkgrey">2008</span></div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Early Start</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>1997, we have established our first plant.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end-->
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style5">
+                                            <div class="featured-icon">
+                                                <div class="ttm-num"><span class="number ttm-textcolor-darkgrey">2009</span></div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Our Mission</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>Fish farm yields can enhance global food security.</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end-->
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style5">
+                                            <div class="featured-icon">
+                                                <div class="ttm-num"><span class="number ttm-textcolor-darkgrey">2010</span></div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Our Vision</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>To deliver products & solutions secure production</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end-->
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style5">
+                                            <div class="featured-icon">
+                                                <div class="ttm-num"><span class="number ttm-textcolor-darkgrey">2011</span></div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Future Goals</h3>
+                                                </div>
+                                                <div class="featured-desc">
+                                                    <p>Be the leading company with High-Tech Agriculture</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end-->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="margin_top30 text-center">Logistic &amp; Transport Solutions Saves Your Time. <strong><a class="ttm-textcolor-skincolor" href="services-1.html">Find your solution <i class="fa fa-arrow-circle-right"></i></a></strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </section>
+            <!--padding_top_zero-section end-->
+
+
+            <!--padding_zero-section-->
+            <section class="ttm-row padding_zero-section ttm-bgcolor-grey bg-layer-equal-height clearfix">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <!-- col-img-img-six -->
+                            <div class="ttm-bg ttm-bg ttm-col-bgimage-yes col-bg-img-six ttm-left-span">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                    <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                </div>
+                                <div class="layer-content">                                    
+                                </div>
+                            </div><!-- col-img-bg-img-six end-->
+                            <img class="img-fluid ttm-equal-height-image" src="images/bg-image/col-bgimage-6.jpg" alt="bg-image">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <!-- col-img-img-six -->
+                            <div class="ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-darkgrey ttm-right-span z-index-2 spacing-6">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                                <div class="layer-content">
+                                    <!-- section title -->
+                                    <div class="section-title">
+                                        <div class="title-header">
+                                            <h3>our services</h3>
+                                            <h2 class="title">We Provide A Better Aqua Farming</h2>
+                                        </div>
+                                        <div class="title-desc"><p>Aqovo provide you with all the necessary information that is important for using our products. We constantly follow the dynamics of international exchanges and follow the “Best Practices” relating to the aquaculture sector</p></div>
+                                    </div><!-- section title end -->
+                                    <div class="margin_top20">
+                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" href="contact-us.html">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div><!-- col-img-bg-img-six end-->
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ttm-bg ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-skincolor h-auto spacing-7 z-index-2">
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                    <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                </div>
+                                <div class="layer-content">
+                                    <div class="slick_slider slick-dots-style2" data-slick='{"slidesToShow": 1, "slidesToScroll": 1 , "dots":true, "arrows":false, "autoplay":false, "infinite":true, "centerMode":false, "responsive": [{"breakpoint":991,"settings":{"slidesToShow": 1}}]}' >
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style6">
+                                            <div class="featured-icon">
+                                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-lg">
+                                                    <i class="flaticon flaticon-pond"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>We Provide The Best Aqua Cares For Your farm</h3>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end -->
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style6">
+                                            <div class="featured-icon">
+                                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-lg">
+                                                    <i class="flaticon flaticon-placeholder"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>A Gentle and Effective Net Cleaning </h3>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end -->
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box icon-align-top-content style6">
+                                            <div class="featured-icon">
+                                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-lg">
+                                                    <i class="flaticon flaticon-lake-1"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title">
+                                                    <h3>Fresh, frozen and the processed seafood  products</h3>
+                                                </div>
+                                            </div>
+                                        </div><!-- featured-icon-box end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--padding_zero-section end-->
+
+
+            <!--fid-section-->
+            <section class="ttm-row fid-section ttm-bgcolor-darkgrey clearfix">
+                <div class="container">
+                    <div class="row ttm-vertical_sep">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <!-- ttm-fid -->
+                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                    <i class="flaticon-prawn"></i>
+                                </div>
+                                <div class="ttm-fid-contents">
+                                    <h4 class="ttm-fid-inner">
+                                        <span   data-appear-animation="animateDigits" 
+                                                data-from="0" 
+                                                data-to="9462" 
+                                                data-interval="5" 
+                                                data-before="" 
+                                                data-before-style="sup" 
+                                                data-after="+" 
+                                                data-after-style="sub" 
+                                                class="numinate">9462
+                                        </span>
+                                    </h4>
+                                    <h3 class="ttm-fid-title">Successful Projects</h3>
+                                </div>
+                                <div class="ttm-fid-desc">
+                                    <p>Delivering deep insight changing revolutionary strategies</p>
+                                </div>
+                            </div><!-- ttm-fid end -->
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <!-- ttm-fid -->
+                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                    <i class="flaticon-pond-1"></i>
+                                </div>
+                                <div class="ttm-fid-contents">
+                                    <h4 class="ttm-fid-inner">
+                                        <span   data-appear-animation="animateDigits" 
+                                                data-from="0" 
+                                                data-to="1589" 
+                                                data-interval="5" 
+                                                data-before="" 
+                                                data-before-style="sup" 
+                                                data-after="+" 
+                                                data-after-style="sub" 
+                                                class="numinate">1589
+                                        </span>
+                                    </h4>
+                                    <h3 class="ttm-fid-title">Clients Worldwide</h3>
+                                </div>
+                                <div class="ttm-fid-desc">
+                                    <p>Successful on delivering the best seafood Worldwide</p>
+                                </div>
+                            </div><!-- ttm-fid end -->
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <!-- ttm-fid -->
+                            <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                    <i class="flaticon-lake-1"></i>
+                                </div>
+                                <div class="ttm-fid-contents">
+                                    <h4 class="ttm-fid-inner">
+                                        <span   data-appear-animation="animateDigits" 
+                                                data-from="0" 
+                                                data-to="46" 
+                                                data-interval="4" 
+                                                data-before="" 
+                                                data-before-style="sup" 
+                                                data-after="+" 
+                                                data-after-style="sub" 
+                                                class="numinate">46
+                                        </span>
+                                        <span>M</span>
+                                    </h4>
+                                    <h3 class="ttm-fid-title">Delivered Goods</h3>
+                                </div>
+                                <div class="ttm-fid-desc">
+                                    <p>Our production for water installation have been the best</p>
+                                </div>
+                            </div><!-- ttm-fid end -->
+                        </div>
+                    </div><!-- row end -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="padding_top90 res-991-padding_top0"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--fid-section end-->
+
+
+            <!--padding_zero-section-->
+            <section class="ttm-row padding_zero-section clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row mb_15 mt_110 res-991-margin_top50">
+                                <div class="col-lg-6 col-md-6">
+                                    <!--featured-icon-box-->
+                                    <div class="featured-icon-box icon-align-before-content icon-ver_align-top ttm-bgcolor-white p-30 border-rad_6 box-shadow icon-flip-hover">
+                                        <div class="featured-icon pt-0">
+                                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-size-xl ttm-icon_element-color-skincolor">
+                                                <i class="flaticon-lake"></i>
+                                            </div>
+                                        </div>
+                                        <div class="featured-content">
+                                            <div class="featured-title">
+                                                <h3 class="mb-2">The Export Potential</h3>
+                                            </div>
+                                            <div class="title-desc">
+                                                <p>Fish and fish products have presently emerged as the largest exports group of Asia</p>
+                                            </div>
+                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark" href="prawn-feeds.html" tabindex="0">view More<i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div><!-- featured-icon-box end-->
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <!--featured-icon-box-->
+                                    <div class="featured-icon-box icon-align-before-content icon-ver_align-top ttm-bgcolor-white p-30 border-rad_6 box-shadow icon-flip-hover">
+                                        <div class="featured-icon pt-0">
+                                            <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-size-xl ttm-icon_element-color-skincolor">
+                                                <i class="flaticon-lake-2"></i>
+                                            </div>
+                                        </div>
+                                        <div class="featured-content">
+                                            <div class="featured-title">
+                                                <h3 class="mb-2">The Future Prospects</h3>
+                                            </div>
+                                            <div class="title-desc">
+                                                <p>Planning, monitoring and the funding of several centrally sponsored fishery schemes</p>
+                                            </div>
+                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-dark" href="prawn-feeds.html" tabindex="0">view More<i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div><!-- featured-icon-box end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--padding_zero-section end-->
+
+            
+            <!--blog-section-->
+            <section class="ttm-row blog-section clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- section title -->
+                            <div class="section-title title-style-center_text">
+                                <div class="title-header">
+                                    <h3>KNOWLEDGE CORNER</h3>
+                                    <h2 class="title">Our Latest Top Articles</h2>
+                                </div>
+                                <div class="title-desc">
+                                    <p>Let’s get knowledge & expand marine & aqua farming skills. We have some research work and news!</p>
+                                </div>
+                            </div><!-- section title end -->
+                        </div>
+                    </div>
+                    <div class="row slick_slider padding_bottom5" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1024,"settings":{"slidesToShow": 3}} , {"breakpoint":900,"settings":{"slidesToShow": 2}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                        <div class="col-lg-4">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post style2">
+                                <div class="featured-imagebox-post-inner">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/blog/blog-01-620x460.jpg" alt="blog-img">
+                                    </div>
+                                    <div class="featured-content">
+                                        <!-- ttm-box-post-date -->
+                                        <div class="ttm-box-post-date">
+                                            <div class="entry-date"><span>29</span>Jun 2021</div>
+                                        </div><!-- ttm-box-post-date end -->
+                                        <div class="post-meta">
+                                            <span class="ttm-meta-line category">Marketing, Unquoted</span>
+                                            <span class="ttm-meta-line byline">John Dave</span>
+                                        </div>
+                                        <div class="featured-title">
+                                            <h3><a href="blog-single.html">5 Best Tips When Buying a Fishing Pole</a></h3>
+                                        </div>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="blog-single.html">Read More<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end -->
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post style2">
+                                <div class="featured-imagebox-post-inner">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/blog/blog-02-620x460.jpg" alt="blog-img">
+                                    </div>
+                                    <div class="featured-content">
+                                        <!-- ttm-box-post-date -->
+                                        <div class="ttm-box-post-date">
+                                            <div class="entry-date"><span>29</span>Jun 2021</div>
+                                        </div>
+                                        <div class="post-meta">
+                                            <span class="ttm-meta-line category">Marketing, Unquoted</span>
+                                            <span class="ttm-meta-line byline">John Dave</span>
+                                        </div><!-- post-meta end -->
+                                        <div class="featured-title">
+                                            <h3><a href="blog-single.html">Now to Keep Your Fishing Tackle Best</a></h3>
+                                        </div>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="blog-single.html">Read More<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end -->
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post style2">
+                                <div class="featured-imagebox-post-inner">
+                                    <div class="featured-thumbnail ttm-post-format-video">
+                                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/vwCIoVICDY4" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypte  d-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+                                    </div>
+                                    <div class="featured-content">
+                                        <!-- ttm-box-post-date -->
+                                        <div class="ttm-box-post-date">
+                                            <div class="entry-date"><span>29</span>Jun 2021</div>
+                                        </div><!-- ttm-box-post-date end -->
+                                        <div class="post-meta">
+                                            <span class="ttm-meta-line category">Aquarium, Unquoted</span>
+                                            <span class="ttm-meta-line byline">John Dave</span>
+                                        </div><!-- post-meta end -->
+                                        <div class="featured-title">
+                                            <h3><a href="blog-single.html">Adding Flare To Your Soft Plastic Baits</a></h3>
+                                        </div>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="blog-single.html">Read More<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end -->
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post style2">
+                                <div class="featured-imagebox-post-inner">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/blog/blog-04-620x460.jpg" alt="blog-img">
+                                    </div>
+                                    <div class="featured-content">
+                                        <!-- ttm-box-post-date -->
+                                        <div class="ttm-box-post-date">
+                                            <div class="entry-date"><span>29</span>Jun 2021</div>
+                                        </div><!-- ttm-box-post-date end -->
+                                        <div class="post-meta">
+                                            <span class="ttm-meta-line category">Prawn, Unquoted</span>
+                                            <span class="ttm-meta-line byline">John Dave</span>
+                                        </div><!-- post-meta end -->
+                                        <div class="featured-title">
+                                            <h3><a href="blog-single.html">Delicate Crab & Prawn Meat Soft Taste</a></h3>
+                                        </div>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="blog-single.html">Read More<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end -->
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post style2">
+                                <div class="featured-imagebox-post-inner">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/blog/blog-05-620x460.jpg" alt="blog-img">
+                                    </div>
+                                    <div class="featured-content">
+                                        <!-- ttm-box-post-date -->
+                                        <div class="ttm-box-post-date">
+                                            <div class="entry-date"><span>29</span>Jun 2021</div>
+                                        </div><!-- ttm-box-post-date end -->
+                                        <div class="post-meta">
+                                            <span class="ttm-meta-line category">Angelfish, Unquoted</span>
+                                            <span class="ttm-meta-line byline">John Dave</span>
+                                        </div><!-- post-meta end -->
+                                        <div class="featured-title">
+                                            <h3><a href="blog-single.html">10 Reasons Why Boat Trips Are Good</a></h3>
+                                        </div>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="blog-single.html">Read More<i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--blog-section end-->
+
+
+        </div><!--site-main end-->
+
+
+        <!--footer start-->
+        <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+            <div class="second-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_text clearfix">
+                                <div class="footer-logo">
+                                    <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170" src="images/footer-logo.svg" alt="image">
+                                </div>
+                                <div class="textwidget widget-text">
+                                    <p>At the Aqovo, our mission is to promote aquaculture practices. For over 30 years, Aqovo have demonstrated commitment to responsible aquaculture.</p>
+                                    <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="contact-us.html">Make a appointment <i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
+                            <div class="widget widget_nav_menu clearfix">
+                               <h3 class="widget-title">Links</h3>
+                               <ul id="menu-footer-quick-links" class="menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our CLinic</a></li>
+                                    <li><a href="#">Our Doctors</a></li>
+                                    <li><a href="#">News & Media</a></li>
+                                    <li><a href="#">Appointments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_img_gellary clearfix">
+                               <h3 class="widget-title">Our Gallery</h3>
+                                <ul>
+                                    <li><a href="images/portfolio/portfolio-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/services/services-05-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/services/services-05-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-03-1200x800.jpg"  rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-03-150x150.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+                            <div class="widget widget_cta clearfix">
+                                <h3 class="widget-title">Quick Contacts</h3>
+                                <p>If you have any questions or need help</p>
+                                <div class="d-flex">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
+                                        <i class="flaticon flaticon-call"></i>
+                                    </div>
+                                    <h4>+123 456 7890</h4>
+                                </div>
+                                <p>2307 Beverley Rd Brooklyn, New York 11226 United States.</p>
+                                <div class="d-inline-table align-items-center justify-content-between">
+                                    <a class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5" href="contact-us.html">Get direction <i class="fa fa-chevron-right"></i></a>
+                                    <div class="social-icons d-inline-block margin_top10 margin_bottom10">
+                                        <ul class="social-icons list-inline">
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="instagram" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer-text copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="d-md-flex justify-content-between">
+                                <span class="cpy-text">Copyright © 2021 <a href="#" class="ttm-textcolor-skincolor font-weight-500">Aqovo </a> All rights reserved.</span>
+                                <ul class="footer-nav-menu">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-us.html">services</a></li>
+                                    <li><a href="contact-us.html">Privcy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->
+
+
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
+
+</div><!-- page end -->
+
+
+    <!-- Javascript -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery.easing.js"></script> 
+    <script src="js/jquery-waypoints.js"></script>    
+    <script src="js/jquery-validate.js"></script> 
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/numinate.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/jquery-isotope.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Javascript end-->
+
+</body>
+
+<!-- Mirrored from themetechmount.com/html/aqovo/header-infostack.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:41:20 GMT -->
+</html>

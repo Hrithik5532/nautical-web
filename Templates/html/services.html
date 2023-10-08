@@ -1,0 +1,239 @@
+{% extends "html/templates.html" %}
+
+
+
+{% block body %}
+
+        <!-- page-title -->
+        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
+            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="ttm-page-title-row-inner">
+                            <div class="page-title-heading">
+                                <h2 class="title">Service</h2>
+                            </div>
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="{% url 'home' %}">Home</a>
+                                </span>
+                                <span>Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+        <!-- page-title end -->
+
+
+        <!--site-main start-->
+        <div class="site-main">
+
+            
+            <div class="ttm-row sidebar ttm-sidebar-left clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-4 widget-area sidebar-left">
+                            <aside class="widget widget-nav-menu">
+                                <ul>
+                                    <li class="active"><a href="prawn-feeds.html"> Prawn Feeds </a></li>
+                                    <li><a href="flowerhorn-fish.html"> Flowerhorn Fish </a></li>
+                                    <li><a href="hatchery-supply.html"> Hatchery Supply </a></li>
+                                    <li><a href="aquatic-plants.html"> Aquatic Plants </a></li>
+                                    <li><a href="green-care.html"> Green Care </a></li>
+                                    <li><a href="water-changes.html"> Water Changes </a></li>
+                                </ul>
+                            </aside>
+                            <aside class="widget widget-download with-title">
+                                <div class="d-flex download_block">
+                                    <div class="download_img_icon">
+                                        <img class="img-fluid auto_size" width="46" height="53" src="images/download-pdf.png" alt="download-pdf-img" />
+                                    </div>
+                                    <div class="padding_left20">
+                                        <p class="ttm-textcolor-skincolor margin_bottom0">Case Studies</p>
+                                        <h2 class="fs-18">Audit Assuarance</h2>
+                                        <a href="#" target="_blank"><i class="ti-arrow-right mr-1"></i>Download (3.5 MB)</a>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside class="widget widget-banner with-title">
+                               <div class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
+                                    <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                        <div class="ttm-col-wrapper-bg-layer-inner"></div>
+                                    </div>
+                                    <div class="layer-content text-center">
+                                        <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-style-round ttm-icon_element-color-skincolor ttm-icon_element-size-xl">
+                                            <i class="fa fa-comments-o"></i>
+                                        </div>
+                                        <h3>Do You Need Any Help?</h3>
+                                        <div class="ttm-horizontal_sep width-100 margin_top20 margin_bottom20"></div>
+                                        <ul>
+                                            <li>+1 800 556 77 894</li>
+                                            <li>info@yourmailexample.com</li>
+                                        </ul>
+                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">appoinments!</a>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside class="widget flicker-widget with-title">
+                                <h3 class="widget-title">Aqovo Gallery</h3>
+                                <div class="images-gellary">
+                                    <ul>
+                                        <li><a class="ttm_prettyphoto" href="images/portfolio/portfolio-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/portfolio/portfolio-01-150x150.jpg" alt=""></a>
+                                        </li>
+                                        <li><a class="ttm_prettyphoto" href="images/portfolio/portfolio-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/portfolio/portfolio-02-150x150.jpg" alt=""></a>
+                                        </li>
+                                        <li><a class="ttm_prettyphoto" href="images/services/services-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/services/services-02-150x150.jpg" alt=""></a>
+                                        </li>
+                                        <li><a class="ttm_prettyphoto" href="images/blog/blog-06-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/blog/blog-06-150x150.jpg" alt=""></a>
+                                        </li>
+                                        <li><a class="ttm_prettyphoto" href="images/portfolio/portfolio-03-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/portfolio/portfolio-03-150x150.jpg" alt=""></a>
+                                        </li>
+                                        <li><a class="ttm_prettyphoto" href="images/portfolio/portfolio-04-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                            <img class="img-fluid" src="images/portfolio/portfolio-04-150x150.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-8 content-area">
+                            <div class="ttm-service-single-content-area">
+                                <div class="ttm_fatured_image-wrapper margin_bottom30">
+                                    <img class="img-fluid" src="images/services/services-01-1200x800.jpg" alt="services-1">
+                                    <div class="p-15 padding_left30 padding_right30 ttm-bgcolor-skincolor">
+                                        <h5 class="fs-18 mb-0">We approach your audit with a deep loream ipsum under standing of your popular business.</h5>
+                                    </div>
+                                </div>
+                                <div class="ttm-service-description">
+                                    <h3>Description For Our Service</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&nbsp;<u><a class="ttm-textcolor-skincolor" href="#">Quis ipsum suspendisse ultrices</a></u> gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. m suspendisse ultrices gravida. Risus commodo <strong>vivm suspendisse</strong> ultrices gravida. ipsum suspendisse ultrices gravida.</p>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                                        <i class="flaticon-pond-1"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Water &amp; Soil Quality</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>Accumulation of surface organic matter at the soil surface intentionally taken care of bringing</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                                        <i class="flaticon-lake-1"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>The Future Prospects</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>Planning, monitoring and the funding of several centrally sponsored fishery schemes</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                                        <i class="flaticon-lake"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>The Export Potential</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>Fish and fish products have presently emerged as the largest exports group of the Asia</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="featured-icon-box icon-align-before-content icon-ver_align-top icon-flip-hover">
+                                                <div class="featured-icon">
+                                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                                        <i class="flaticon-ice-fishing"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="featured-content">
+                                                    <div class="featured-title">
+                                                        <h3>Latest Machinery</h3>
+                                                    </div>
+                                                    <div class="featured-desc">
+                                                        <p>It is considered one of the most profitable in import and export value in the fish farming industry</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ttm-horizontal_sep width-100 margin_top30 margin_bottom35"></div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="margin_bottom30">
+                                                <h3>The Best Aquarist You Can Make is In Your Self</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipis ing elit, <u><a class="ttm-textcolor-skincolor" href="#">sed do eiusmod</a></u> tempor incidi.</p>
+                                                <ul class="ttm-list fs-15 ttm-list-style-icon ttm-list-icon-color-skincolor">
+                                                    <li>
+                                                        <i class="ti ti-arrow-circle-right"></i>
+                                                        <div class="ttm-list-li-content">Lorem ipsum dolor sit amet, consectetur adipi</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ti ti-arrow-circle-right"></i>
+                                                        <div class="ttm-list-li-content">Contrary to popular belief, Lore mply random</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ti ti-arrow-circle-right"></i>
+                                                        <div class="ttm-list-li-content">There are many variations of passages</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ti ti-arrow-circle-right"></i>
+                                                        <div class="ttm-list-li-content">The standard chunk of Lorem Ipsum</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="margin_bottom30">
+                                                <div class="ttm_single_image-wrapper margin_left50">
+                                                    <img class="img-fluid" src="images/single-img-05.jpg" alt="single-05">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p class="mb-0">Lorem ipsum <strong>dolor sit amet, consectetur</strong> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </div>
+
+
+        </div><!--site-main end-->
+
+{% endblock body %}
+
+
+
+
