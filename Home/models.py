@@ -47,3 +47,23 @@ class Articles(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class Skills(models.Model):
+    skill = models.CharField(max_length=50)
+    def __str__(self):
+        return self.skill
+    
+class JobPositions(models.Model):
+    title = models.CharField(max_length=50)
+    sub_title = models.CharField(max_length=50,null=True,blank=True)
+    salary = models.CharField(max_length=50,null=True, blank=True)
+    location = models.CharField(max_length=50,null=True, blank=True)
+    experiance = models.CharField(max_length=20,null=True, blank=True)
+    details = RichTextField(null=True, blank=True)
+    skills = models.ManyToManyField(Skills)
+    last_date = models.DateField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) :
+        return self.title

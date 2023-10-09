@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
 
-                                      <span>Call Now +9876543210</span>
+                                      <a href="tel:+912261237777">Call Now  +912261237777</a>
 
 
                                     <ul class="social-icons list-inline top-social-icons " style="display: flex;justify-content:flex-end;">
@@ -132,7 +132,7 @@
                                               
                                                    
                                                     <li class="mega-menu-item" id="About Us">
-                                                        <a href="#" class="mega-menu-link">About Us</a>
+                                                        <a href="{% url 'about_us' %}" class="mega-menu-link">About Us</a>
                                                         {% comment %} <ul class="mega-submenu">
                                                             <li><a href="project-style-01.html">Projects Style One</a></li>
                                                             <li><a href="project-style-02.html">Projects Style Two</a></li>
@@ -179,7 +179,8 @@
                                                 
                                             </div><!-- header_extra end --> 
                                     {% endcomment %}
-                                    <div class="header_btn"><a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">Get A Quotes!</a></div>
+                                    <div class="header_btn"><a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">Get A Quotes!</a>
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="{% url 'career' %}">Career With us</a></div>
                                 </div><!-- site-navigation end-->
                             </div>
                         </div>

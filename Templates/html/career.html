@@ -55,28 +55,7 @@
 
 }
 </style>
-        <!-- page-title -->
-        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
-            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="ttm-page-title-row-inner">
-                            <div class="page-title-heading">
-                                <h2 class="title">blog grid view</h2>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                <span>
-                                    <a title="Homepage" href="{% url 'home' %}">Home</a>
-                                </span>
-                                <span>blog</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>                    
-        </div>
-        <!-- page-title end -->
+  =
 
 
     <!--site-main start-->
@@ -87,36 +66,6 @@
             <section class="ttm-row sidebar ttm-sidebar-right clearfix">
                 <div class="container">
                     <div class="row">
-                        <div class="row col-lg-9 content-area" >
-                            {% for i in articles %}
-                            
-                            <div class="col-lg-4">
-                                <!-- featured-imagebox-post -->
-                                <div class="featured-imagebox featured-imagebox-post style2">
-                                    <div class="featured-imagebox-post-inner">
-                                        <div class="featured-thumbnail">
-                                            <a href="{% url 'article_details' i.name %}">  <img class="img-fluid" src="../../media/{{i.thumbnail}}"  alt="blog-img"></a> 
-                                        </div>
-                                        <div class="featured-content">
-                                            <!-- ttm-box-post-date -->
-                                            <div class="ttm-box-post-date">
-                                                <div class="entry-date"><span>{{i.created_at | date:'d'}}</span>{{i.created_at | date:'m-y'}}</div>
-                                            </div><!-- ttm-box-post-date end -->
-                                            <div class="post-meta">
-                                                <span class="ttm-meta-line byline">{{i.writer}}</span>
-                                            </div>
-                                            <div class="featured-title">
-                                                <h3><a href="{% url 'article_details' i.name %}">{{i.name}}</a></h3>
-                                            </div>
-                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="{% url 'article_details' i.name %}">Read More<i class="fa fa-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- featured-imagebox-post end -->
-                            </div>
-                            {% endfor %}
-
-                        
-                        </div>
                         <div class="col-lg-4 widget-area sidebar-right">
                             <aside class="widget widget-search with-title">
                                 <form role="search" method="GET" class="search-form" action="{% url 'articles' %}">
@@ -149,30 +98,68 @@
                                    
                                 </div>
                             </aside>
-                            {% comment %} <aside class="widget widget-banner with-title">
-                               <div class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
-                                    <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
-                                        <div class="ttm-col-wrapper-bg-layer-inner"></div>
-                                    </div>
-                                    <div class="layer-content text-center">
-                                        <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-style-round ttm-icon_element-color-skincolor ttm-icon_element-size-xl">
-                                            <i class="fa fa-comments-o"></i>
+                           
+                        </div>
+                        <div class="row col-lg-9 content-area" >
+                            {% for i in jobs %}
+                            
+                            <a href="{% url 'career_detail' i.title %}">
+                            <div class="col-lg-12">
+                                <!-- featured-imagebox-post -->
+
+                                    <div class="featured-imagebox featured-imagebox-post style2">
+                                        <div class="featured-imagebox-post-inner">
+                                        
+                                            <div class="featured-content">
+                                            <!-- ttm-box-post-date end -->
+                                                <div class="row">
+                                                    <div class="col-6">
+
+                                                        <div class="featured-title">
+                                                            <h3><a >{{i.title}}</a></h3>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span class="ttm-meta-line byline">Position : {{i.sub_title}}</span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span class="">Package: ₹.{{i.salary}}</span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span class="">Last Date: {{i.last_date | date:'d,M Y'}}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="featured-title">
+                                                            <span>Location : {{i.location}}</span>
+                                                        </div>
+                                                        <div class="featured-title">
+                                                            <span>Experiance : {{i.experiance}}</span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <a>Skills Required:</a>
+                                                            {% for j in i.skills.all %}
+                                                                
+                                                                <a  class="tag-cloud-link" style="background-color:#eff3ff;padding:6px;border-radius:10px">{{j.skill}}</a>
+                                                                {% endfor %}
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <h3>Do You Need Any Help?</h3>
-                                        <div class="ttm-horizontal_sep width-100 margin_top20 margin_bottom20"></div>
-                                        <ul>
-                                            <li>+1 800 556 77 894</li>
-                                            <li>info@yourmailexample.com</li>
-                                        </ul>
-                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">appoinments!</a>
-                                    </div>
+                                    </div><!-- featured-imagebox-post end -->
                                 </div>
-                            </aside> {% endcomment %}
+                            </a>
+                            {% endfor %}
+
+                        
                         </div>
                         
+                        
                         <nav aria-label="Page navigation example hide-mobile" style="display: flex !important;
-                        width: 100% !important;
-                        justify-content: center;">
+                                    width: 100% !important;
+                                    justify-content: center;">
                             {% if articles.has_other_pages %}
                              <ul class="pagination">
                                                     {% if articles.has_previous %}

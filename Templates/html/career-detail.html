@@ -4,20 +4,19 @@
 
 
         <!-- page-title -->
-        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix">
-            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix"style="background-image:url(../../static/assets/custom-images/1.jpg);">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="ttm-page-title-row-inner">
                             <div class="page-title-heading">
-                                <h2 class="title">{{article.name}}</h2>
+                                <h2 class="title" style="color:black">{{job.title}}</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
                                 <span>
-                                    <a title="Homepage" href="{% url 'home' %}">Home</a>
+                                    <a title="Homepage"style="color:black" href="{% url 'home' %}">Home</a>
                                 </span>
-                                <span>Blog</span>
+                                <span style="color:black">Job Detail</span>
                             </div>
                         </div>
                     </div>
@@ -45,25 +44,53 @@
                             </div><!-- post-featured-wrapper end -->
                             <!-- ttm-blog-classic-content -->
                             <div class="ttm-blog-single-content">
-                                <div class="ttm-post-entry-header">
-                                    <div class="post-meta">
-                                        <span class="ttm-meta-line byline"><i class="fa fa-user"></i>{{article.writer}}</span>
-                                        <span class="ttm-meta-line category"><i class="fa fa-folder"></i>{{article.category.name}}</span>
-                                        <span class="ttm-meta-line date"><i class="fa fa-calendar"></i>{{article.created_at | date:"d,M Y"}}</span>
-                                    </div>
-                                </div>
+
                                 <div class="entry-content">
+                                    <div class="row d-flex">
+
+                                        <div class="featured-title w-50">
+                                            <h3><a >{{job.title}}</a></h3>
+                                        </div>
+                                        <div class="featured-title "style="align-items: end;display: flex;right: 3px;position: absolute;">
+                                          <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="#application-form' %}">Apply</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <div class="post-meta">
+                                                <span class="ttm-meta-line byline">Position : {{job.sub_title}}</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span class="">Package: ₹.{{job.salary}}</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span class="">Last Date: {{job.last_date | date:'d,M Y'}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="post-meta">
+                                                <span>Location : {{job.location}}</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>Experiance : {{job.experiance}}</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <a>Skills Required:</a>
+                                                {% for j in job.skills.all %}
+                                                    
+                                                    <a  class="tag-cloud-link" style="background-color:#eff3ff;padding:6px;border-radius:10px">{{j.skill}}</a>
+                                                    {% endfor %}
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="ttm-box-desc-text">
-                                        
-                                        {{article.content | safe}}
+                                        <h3>Job Description: </h3>
+                                        {{job.details | safe}}
                                         <div class="social-media-block">
                                             <div class="d-sm-flex justify-content-between align-items-center">
-                                                <div class="ttm_tag_lists margin_top15">
-                                                    <span class="ttm-tags-links-title ttm-textcolor-darkgrey"><i class="fa fa-tags"></i>Tags:</span>
-                                                    <span class="ttm-tags-links">{% for tag in article.tags.all %}
-                                                    
-                                                   <a href="{% url 'articles' %}?tag={{tag.name}}">{{tag.name}}</a> {% endfor %}</span>
-                                                </div>
+                                                
                                                 <div class="ttm-social-share-wrapper margin_top15">
                                                     <h6 class="fs-16 m-0 font-weight-normal padding_right10">Share : </h6>
                                                     <ul class="social-icons">
@@ -95,35 +122,36 @@
                                     </div>
                                 </div>
                             </div><!-- ttm-blog-classic-content end -->
-                            {% comment %} <div class="ttm-blog-classic-box-comment clearfix">
+                            <div class="ttm-blog-classic-box-comment clearfix" id="aaplication-form">
                                 <div id="comments" class="comments-area">
                                     <div class="comment-respond">
-                                        <h3 class="comment-reply-title">Leave a Reply</h3>
-                                        <p class="comment-notes">Your email address will not be published. </p>
+                                        <h3 class="comment-reply-title">Apply Now!!</h3>
                                         <form action="#" method="post" id="commentform" class="comment-form">
-                                            <p class="comment-form-comment">
-                                                <textarea id="comment" placeholder="Comment" name="comment" cols="45" rows="7" aria-required="true"></textarea>
-                                            </p>
-                                            <p class="comment-form-author">
-                                                <input id="author" placeholder="Name (required)" name="author" type="text" value="" size="30" aria-required="true">
-                                            </p>
-                                            <p class="comment-form-email">
-                                                <input id="email" placeholder="Email (required)" name="email" type="text" value="" size="30" aria-required="true">
-                                            </p>
-                                            <p class="comment-form-url">
-                                                <input id="url" placeholder="Website" name="url" type="text" value="" size="30">
-                                            </p>
-                                            <p class="comment-cookies">
-                                                <input id="comment-cookies-consent" name="comment-cookies-consent" type="checkbox" value="yes">
-                                                <label for="comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
-                                            </p>
-                                            <p class="form-submit margin_top30 margin_bottom0">
-                                                <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" type="submit">Post Comment</button>
-                                            </p>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span class="text-input"><input name="name" type="text"  placeholder="Your Name*" required></span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="text-input"><input name="email" type="email"  placeholder="Your Email*" required></span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="text-input"><input name="mobile" type="text"  placeholder="Phone Number*" required></span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="text-input"><input name="comapny" type="text"  placeholder="Comapny Name"></span>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <span class="text-input"><textarea name="message" rows="3" placeholder="Message" required></textarea></span>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100 margin_top5" type="submit">Send now!</button>
+                                                </div>
+                                            </div>                                         
+                                            
                                         </form>
                                     </div>
                                 </div>
-                            </div> {% endcomment %}
+                            </div> 
                         </article><!-- post end -->
                     </div>
                     <div class="col-lg-4 widget-area sidebar-right">
