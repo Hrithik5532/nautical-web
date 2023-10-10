@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-lg-4 widget-area sidebar-right">
                             <aside class="widget widget-search with-title">
-                                <form role="search" method="GET" class="search-form" action="{% url 'articles' %}">
+                                <form role="search" method="GET" class="search-form" action="{% url 'career' %}">
                                     <label>
                                     <span class="screen-reader-text">Search for:</span>
                                     <input type="search" class="input-text" placeholder="Search …" value="" name="search">
@@ -76,24 +76,14 @@
                                     <button class="btn ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit"><i class="fa fa-search"></i> </button>
                                 </form>
                             </aside>
-                            <aside class="widget widget-categories with-title">
-                                <h3 class="widget-title">Categories</h3>
-                                <select id="categoryDropdown">
-                                    <option disabled selected>--select--</option>
-                                    {% for i in categories %}
-                                    
-                                    <option data-url="{% url 'articles' %}?category={{ i.name }}">{{i.name}}</options>
-                                    {% endfor %}
-                                    
-                                </select>
-                            </aside>
-                            
+                         
+                          
                             <aside class="widget tagcloud-widget with-title">
-                                <h3 class="widget-title">Tags</h3>
+                                <h3 class="widget-title">Skills</h3>
                                 <div class="tagcloud">
-                                    {% for i in tags %}
+                                    {% for i in skills %}
                                     
-                                    <a href="{% url 'articles' %}?tag={{i.name}}" class="tag-cloud-link">{{i.name}}</a>
+                                    <a href="{% url 'career' %}?tag={{i.skill}}" class="tag-cloud-link">{{i.skill}}</a>
                                     {% endfor %}
                                    
                                 </div>
@@ -160,20 +150,20 @@
                         <nav aria-label="Page navigation example hide-mobile" style="display: flex !important;
                                     width: 100% !important;
                                     justify-content: center;">
-                            {% if articles.has_other_pages %}
+                            {% if jobs.has_other_pages %}
                              <ul class="pagination">
-                                                    {% if articles.has_previous %}
-                                                    <li class="previous page-item"><a href="?page={{ articles.previous_page_number }}"><i
+                                                    {% if jobs.has_previous %}
+                                                    <li class="previous page-item"><a href="?page={{ jobs.previous_page_number }}"><i
                                                                 class="fa fa-chevron-left"> </i></a></li>
                                                     {% else %}
                                                     <li class="disabled page-item"><i class=""></i></li>
-                                                    {% endif %} {% for i in articles.paginator.page_range %} {% if articles.number == i %}
+                                                    {% endif %} {% for i in jobs.paginator.page_range %} {% if jobs.number == i %}
                                                     <li class="active-slide page-item"><span>{{ i }} <span class="sr-only">(current)</span></span>
                                                     </li>
                                                     {% else %}
                                                     <li class="next page-item"><a href="?page={{ i }}">{{ i }}</a></li>
-                                                    {% endif %} {% endfor %} {% if articles.has_next %}
-                                                    <li class="next-slide page-item"><a href="?page={{ articles.next_page_number }}"><i
+                                                    {% endif %} {% endfor %} {% if jobs.has_next %}
+                                                    <li class="next-slide page-item"><a href="?page={{ jobs.next_page_number }}"><i
                                                                 class="fa fa-chevron-right"></i></a></li>
                                                     {% else %}
                                                     <li class="disabled page-item"><i class="bi bi-caret-right-fill"></i></li>

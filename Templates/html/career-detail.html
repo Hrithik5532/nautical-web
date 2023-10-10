@@ -2,6 +2,13 @@
 
 {% block body %}
 
+<style>
+    .modal-backdrop {
+        
+        z-index: 1 !important;
+      
+    }
+</style>
 
         <!-- page-title -->
         <div class="ttm-page-title-row ttm-bg ttm-bgimage-yes ttm-bgcolor-darkgrey clearfix"style="background-image:url(../../static/assets/custom-images/1.jpg);">
@@ -52,7 +59,7 @@
                                             <h3><a >{{job.title}}</a></h3>
                                         </div>
                                         <div class="featured-title "style="align-items: end;display: flex;right: 3px;position: absolute;">
-                                          <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="#application-form' %}">Apply</a>
+                                          <button type="button" class="btn btn-primary ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor text-white" data-toggle="modal" data-target="#application-form">Apply</button>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -62,10 +69,13 @@
                                                 <span class="ttm-meta-line byline">Position : {{job.sub_title}}</span>
                                             </div>
                                             <div class="post-meta">
-                                                <span class="">Package: ₹.{{job.salary}}</span>
+                                                <span class="">Package: <span style="color:green">₹.{{job.salary}}</span></span>
                                             </div>
                                             <div class="post-meta">
-                                                <span class="">Last Date: {{job.last_date | date:'d,M Y'}}</span>
+                                                <span class="" >Last Date: <span style="color:red">{{job.last_date | date:'d,M Y'}}</span></span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span class="">Applicants : {{applicant}}</span>
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -73,7 +83,7 @@
                                                 <span>Location : {{job.location}}</span>
                                             </div>
                                             <div class="post-meta">
-                                                <span>Experiance : {{job.experiance}}</span>
+                                                <span >Experiance : <span style="color:blue">{{job.experiance}}</span></span>
                                             </div>
                                             <div class="post-meta">
                                                 <a>Skills Required:</a>
@@ -122,41 +132,12 @@
                                     </div>
                                 </div>
                             </div><!-- ttm-blog-classic-content end -->
-                            <div class="ttm-blog-classic-box-comment clearfix" id="aaplication-form">
-                                <div id="comments" class="comments-area">
-                                    <div class="comment-respond">
-                                        <h3 class="comment-reply-title">Apply Now!!</h3>
-                                        <form action="#" method="post" id="commentform" class="comment-form">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <span class="text-input"><input name="name" type="text"  placeholder="Your Name*" required></span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <span class="text-input"><input name="email" type="email"  placeholder="Your Email*" required></span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <span class="text-input"><input name="mobile" type="text"  placeholder="Phone Number*" required></span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <span class="text-input"><input name="comapny" type="text"  placeholder="Comapny Name"></span>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <span class="text-input"><textarea name="message" rows="3" placeholder="Message" required></textarea></span>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100 margin_top5" type="submit">Send now!</button>
-                                                </div>
-                                            </div>                                         
-                                            
-                                        </form>
-                                    </div>
-                                </div>
-                            </div> 
+                            
                         </article><!-- post end -->
                     </div>
                     <div class="col-lg-4 widget-area sidebar-right">
                         <aside class="widget widget-search with-title">
-                            <form role="search" method="GET" class="search-form" action="{% url 'articles' %}">
+                            <form role="search" method="GET" class="search-form" action="{% url 'career' %}">
                                 <label>
                                 <span class="screen-reader-text">Search for:</span>
                                 <input type="search" class="input-text" placeholder="Search …" value="" name="search">
@@ -164,43 +145,83 @@
                                 <button class="btn ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit"><i class="fa fa-search"></i> </button>
                             </form>
                         </aside>
-                        <aside class="widget widget-categories with-title">
-                            <h3 class="widget-title">Categories</h3>
-                            <ul>
-                                {% for i in categories %}
-                                
-                                <li><a href="{% url 'articles' %}?category={{i.name}}">{{i.name}}</a></li>
-                                {% endfor %}
-                                
-                            </ul>
-                        </aside>
-                        <aside class="widget widget-recent-post with-title">
-                            <h3 class="widget-title">Recent Posts</h3>
-                            <ul class="widget-post ttm-recent-post-list">
-                                {% for i in articles %}
-                                
-                                <li>
-                                    <a href="blog-single.html"><img class="img-fluid" src="../../media/{{i.thumbnail}}" alt="post-img"></a>
-                                    <div class="post-detail">
-                                        <span class="post-date"><i class="fa fa-calendar"></i>{{i.created_at|date:"d,M Y"}}</span>
-                                        <a href="blog-single.html">{{i.name}}</a>
-                                    </div>
-                                </li>
-                                {% endfor %}
-                         
-                            </ul>
-                        </aside>
+                     
+                      
                         <aside class="widget tagcloud-widget with-title">
-                            <h3 class="widget-title">Tags</h3>
+                            <h3 class="widget-title">Skills</h3>
                             <div class="tagcloud">
-                                {% for i in tags %}
+                                {% for i in skills %}
                                 
-                                <a href="{% url 'articles' %}?tag={{i.name}}" class="tag-cloud-link">{{i.name}}</a>
+                                <a href="{% url 'career' %}?tag={{i.skill}}" class="tag-cloud-link">{{i.skill}}</a>
                                 {% endfor %}
                                
                             </div>
                         </aside>
-                        {% comment %} <aside class="widget widget-banner with-title">
+                        <div class="modal fade" id="application-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle">{{job.title}} - Application Form</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="request_qoute_form" class="request_qoute_form wrap-form clearfix" method="POST" novalidate="novalidate" action="{% url 'career_detail' job.title %}" enctype= 'multipart/form-data'>
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="">Application Id:</label>
+                                                <span class="text-input"><input name="uid" type="text"  value="{{job.uid}}"  ></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Name <span style="color:red">*</span>:</label>
+
+                                                <span class="text-input"><input name="name" type="text"   required></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Email<span style="color:red">*</span> :</label>
+
+                                                <span class="text-input"><input name="email" type="email"   required></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Contact <span style="color:red">*</span> :</label>
+
+                                                <span class="text-input"><input name="mobile" type="text"  required></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">Experiance <span style="color:red">*</span> :</label>
+
+                                                <span class="text-input"><input name="experiance" type="text"   required></span>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="">Expected CTC <span style="color:red">*</span> :</label>
+
+                                                <span class="text-input"><input name="ctc" type="text"   required></span>
+                                            </div>
+                                         
+                                            <div class="col-lg-12">
+                                                <label for="">Resume/CV <span style="color:red">*</span>:</label>
+
+                                                <span class="text-input"><input name="file" type="file"  required></span>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100 margin_top5" type="submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                          {% comment %} <aside class="widget widget-banner with-title">
                            <div class="ttm-col-bgcolor-yes ttm-bgcolor-darkgrey col-bg-img-seven ttm-col-bgimage-yes ttm-bg">
                                 <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
                                     <div class="ttm-col-wrapper-bg-layer-inner"></div>

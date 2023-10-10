@@ -1,9 +1,9 @@
 {% load static %}
-
 <!DOCTYPE html>
+
 <html lang="en">
 
-<!-- Mirrored from themetechmount.com/html/aqovo/header-overlay.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:41:19 GMT -->
+<!-- Mirrored from themetechmount.com/html/aqovo/{% url 'home' %} by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:40:21 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,22 +26,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/megamenu.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
 
-</head>
 <style>
+  
+ .top-nav-custom{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+    grid-template-columns: 1fr auto 1fr;
 
-    .tooltip-top i{
-        font-size: 19px;
-    }
-    .tooltip-topf{
-        width: 45px !important;
+ }
+ .site-navigation{
+    z-index:0! important;
+ }  
+</style>
 
-    }
-    .tooltip-topf i{
-        font-size: 25px;
-    }
-    </style>
+</head>
 
-<body>
+
+<body >
 
     <!--page start-->
     <div class="page">
@@ -52,17 +56,32 @@
         </div> {% endcomment %}
 
         
+        {% for message in messages %}
+            <div class="container-fluid p-0 ">
+                <div class="alert {{ message.tags }} alert-dismissible d-flex justify-content-center " role="alert" >
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="True">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
         <!--header start-->
-        <header id="masthead" class="header ttm-bgcolor-darkgrey ttm-header-style-02">
+        <header id="masthead" class="header ttm-header-style-01">
 
             <!-- topbar -->
-            <div class="top_bar ttm-bgcolor-darkgrey clearfix">
+            <div class="top_bar ttm-bgcolor-darkgrey text-center clearfix">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="d-flex  flex-row align-items-center justify-content-center">
-                                <div class="top_bar_contact_item d-flex" style="height: fit-content;">
-                                    <img id="logo-img" height="50" width="60" class="img-fluid auto_size"  src="{% static 'custom-images/logo.png' %}" alt="logo-img">
+                        <div class="col-xl-12">
+                            <div class="top_bar_contact_item top-nav-custom">
+                               <!-- header_social -->
+                               <div style="display: flex;justify-content:start;text-align:center">
+
+                                   <a class="home-link mt-2" href="{% url 'home' %}" >
+                                       <img id="logo-img" height="50" width="60" class="img-fluid auto_size" src="{% static 'custom-images/logo.png' %}" alt="logo-img">
+                                       
+                                    </a>
                                     <div class="d-flex mt-3 " style="flex-direction: column;
                                     text-align: justify;">
 
@@ -71,20 +90,11 @@
                                         <h6>Services</h6>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center m-auto">
-                                    <div class="d-flex align-items-center">
-                                        <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-white ttm-icon_element-size-xs ttm-icon_element-style-round margin_bottom0">
-                                            <i class="flaticon flaticon-call"></i>
-                                        </div>
-                                        <div class="padding_left20">
-                                            <h6 class="fs-16 font-weight-normal margin_bottom0">Call Us</h6>
-                                            <h5 class="fs-18 margin_bottom0">+123 795 9841</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center ml-auto">
-                                    
-                                    <ul class="social-icons list-inline top-social-icons " style="display: flex;justify-content:flex-end;">
+
+                                      <a href="tel:+912261237777">Call Now  +912261237777</a>
+
+
+                                    {% comment %} <ul class="social-icons list-inline top-social-icons " style="display: flex;justify-content:flex-end;">
                                       
 
                                         <li class="f-icon top-share-icon "><a class="tooltip-top text" href="#" rel="noopener" ><i class="fa fa-facebook"></i></a></li>
@@ -92,11 +102,12 @@
                                         <li class="top-share-icon" ><a class="tooltip-top" href="#" rel="noopener" ><i class="fa fa-flickr"></i></a></li>
                                         <li class="top-share-icon" ><a class="tooltip-top" href="#" rel="noopener" ><i class="fa fa-linkedin"></i></a></li>
 
-                                    </ul> 
-                                  
-                                </div>
+                                    </ul> {% endcomment %}
+
+                                <!-- header_social end-->
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -106,15 +117,14 @@
             <div id="site-header-menu" class="site-header-menu">
                 <div class="site-header-menu-inner ttm-stickable-header">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
+                        <div class="row ">
+                            <div class="col-lg-12 p-0" >
                                 <!--site-navigation -->
                                 <div class="site-navigation d-flex align-items-center justify-content-between">
-                                    <!-- site-branding -->
                                     
-                                    <div class="border-box-block">
+                                    <div >
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <div class="btn-show-menu-mobile menubar menubar--squeeze" style="    top: 37px !important;">
+                                            <div class="btn-show-menu-mobile menubar menubar--squeeze">
                                                 <span class="menubar-box">
                                                     <span class="menubar-inner"></span>
                                                 </span>
@@ -130,7 +140,11 @@
                                                    
                                                     <li class="mega-menu-item" id="About Us">
                                                         <a href="{% url 'about_us' %}" class="mega-menu-link">About Us</a>
-                                                   
+                                                        {% comment %} <ul class="mega-submenu">
+                                                            <li><a href="project-style-01.html">Projects Style One</a></li>
+                                                            <li><a href="project-style-02.html">Projects Style Two</a></li>
+                                                            <li><a href="portfolio-single.html">Project Single View</a></li>
+                                                        </ul> {% endcomment %}
                                                     </li>
 
                                                     <li class="mega-menu-item" id='Services'>
@@ -139,30 +153,24 @@
                                                     </li>
                                                     <li class="mega-menu-item" id="Articles">
                                                         <a href="{% url 'articles' %}" class="mega-menu-link">Articles</a>
-                                                  
+                                                        {% comment %} <ul class="mega-submenu">
+                                                            <li><a href="blog.html">Blog Classic</a></li>
+                                                            <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                                            <li><a href="blog-single.html">Blog Single View</a></li>
+                                                        </ul> {% endcomment %}
                                                     </li>
                                                     <li class="mega-menu-item" id="Contact Us">
                                                         <a href="{% url 'contact_us' %}">Contact us</a>
                                                     </li>
                                                 </ul>
                                             </nav><!-- menu end -->
-                                            <!-- menu end -->
-                                            <!-- header_extra -->
-                                            <div class="header_extra d-flex flex-row align-items-center ml-auto">
-                                                
-                                             
-                                                <!-- header_social -->
-                                                
-                                                <!-- header_social end-->
-                                            </div><!-- header_extra end -->
+                                            
                                         </div>
                                     </div>
-                                    <div class="header_cta">
-                                            
-                                            <button type="button" class="btn btn-primary ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor text-white" data-toggle="modal" data-target="#enquiry">Enquiry</button>
-                                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="{% url 'career' %}">Career With us</a>
-                                        
-                                    </div>
+                               
+                                    <div class="header_btn">
+                                        <button type="button" class="btn btn-primary ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor text-white" data-toggle="modal" data-target="#enquiry">Enquiry</button>
+                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href="{% url 'career' %}">Career With us</a></div>
                                 </div><!-- site-navigation end-->
                             </div>
                         </div>
@@ -172,10 +180,10 @@
             <!-- site-header-menu end-->
         </header><!--header end-->
 
+        {% block body %}{% endblock body%}
 
-       {% block body %}
-       
-       {% endblock body %}
+
+
 
         <!--footer start-->
         <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
@@ -184,34 +192,20 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                             <div class="widget widget_text clearfix">
-                                <div class="footer-logo d-flex">
-                                    <img id="logo-img" height="50" width="80" class="img-fluid auto_size"  src="{% static 'custom-images/logo.png' %}" alt="logo-img">
-                                    <div class="d-flex mt-3 " style="flex-direction: column;
-                                    text-align: justify;">
-
-                                        <h6 class="m-0">Nautical Marine </h6>
-                                        <h6 class="m-0">Management </h6>
-                                        <h6>Services</h6>
-                                    </div>
+                                <div class="footer-logo">
+                                    <img id="footer-logo-img" class="img-fluid auto_size" height="46" width="170" src="images/footer-logo.svg" alt="image">
                                 </div>
                                 <div class="textwidget widget-text">
-                                    <ul class="social-icons list-inline top-social-icons ">
-                                      
-
-                                        <li class="f-icon top-share-icon "><a class="tooltip-topf text" href="#" rel="noopener" ><i class="fa fa-facebook"></i></a></li>
-                                        <li class="top-share-icon"><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-twitter"></i></a></li>
-                                        <li class="top-share-icon" ><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-flickr"></i></a></li>
-                                        <li class="top-share-icon" ><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-linkedin"></i></a></li>
-
-                                    </ul> 
+                                    <p>At the Aqovo, our mission is to promote aquaculture practices. For over 30 years, Aqovo have demonstrated commitment to responsible aquaculture.</p>
+                                    <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="contact-us.html">Make a appointment <i class="fa fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
                             <div class="widget widget_nav_menu clearfix">
-                               <h3 class="widget-title">Services</h3>
+                               <h3 class="widget-title">Links</h3>
                                <ul id="menu-footer-quick-links" class="menu">
-                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    <li><a href="#">About Us</a></li>
                                     <li><a href="#">Our CLinic</a></li>
                                     <li><a href="#">Our Doctors</a></li>
                                     <li><a href="#">News & Media</a></li>
@@ -219,15 +213,28 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
-                            <div class="widget widget_nav_menu clearfix">
-                               <h3 class="widget-title">Links</h3>
-                               <ul id="menu-footer-quick-links" class="menu">
-                                   <li><a href="{% url 'home' %}">Home</a></li>
-                                   <li><a href="{% url 'about_us' %}">About Us</a></li>
-                                   <li><a href="{% url 'services' %}">Services</a></li>
-                                   <li><a href="{% url 'articles' %}">Articles</a></li>
-                                    <li><a href="{% url 'career' %}">Career </a></li>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_img_gellary clearfix">
+                               <h3 class="widget-title">Our Gallery</h3>
+                                <ul>
+                                    <li><a href="images/portfolio/portfolio-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-02-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-02-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/blog/blog-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/blog/blog-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-01-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-01-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/services/services-05-1200x800.jpg" rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/services/services-05-150x150.jpg" alt=""></a>
+                                    </li>
+                                    <li><a href="images/portfolio/portfolio-03-1200x800.jpg"  rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
+                                        <img class="img-fluid" src="images/portfolio/portfolio-03-150x150.jpg" alt=""></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -239,12 +246,18 @@
                                     <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
                                         <i class="flaticon flaticon-call"></i>
                                     </div>
-                                    <h4>+912261237777</h4>
+                                    <h4>+123 456 7890</h4>
                                 </div>
-                                <p>3, Victory Mansion, 2nd Floor, Sitladevi temple Road, Opp. Union bank Of India, Mahim (W), Mumbai - 400 016.</p>
+                                <p>2307 Beverley Rd Brooklyn, New York 11226 United States.</p>
                                 <div class="d-inline-table align-items-center justify-content-between">
-                                    <a class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5" href="https://www.google.com/maps/dir//Nautical+Marine+Management+Services+Pvt.+Ltd.+Victory+Mansion+Sitladevi+Temple+Road,+New+Girgaonkar+Wadi,+New+Dinkar+Co+Operative+Housing+Society,+Mahim+Mumbai,+Maharashtra+400016/@19.0353692,72.8445053,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3be7ced348dbaaab:0xbd443d5709a904e3">Get direction <i class="fa fa-chevron-right"></i></a>
-                                    
+                                    <a class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5" href="contact-us.html">Get direction <i class="fa fa-chevron-right"></i></a>
+                                    <div class="social-icons d-inline-block margin_top10 margin_bottom10">
+                                        <ul class="social-icons list-inline">
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="facebook" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="twitter" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="tooltip-top" href="#" rel="noopener" aria-label="instagram" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -256,11 +269,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="d-md-flex justify-content-between">
-                                <span class="cpy-text">Copyright © 2023 <a href="{% url 'home' %}" class="ttm-textcolor-skincolor font-weight-500">NMMS </a> All rights reserved.</span>
+                                <span class="cpy-text">Copyright © 2021 <a href="#" class="ttm-textcolor-skincolor font-weight-500">Aqovo </a> All rights reserved.</span>
                                 <ul class="footer-nav-menu">
-                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
-                                    <li><a href="{% url 'career' %}">Career</a></li>
-                                    <li><a href="{% url 'services' %}">Services</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-us.html">services</a></li>
+                                    <li><a href="contact-us.html">Privcy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -270,13 +283,13 @@
         </footer>
         <!--footer end-->
 
-        <!--back-to-top start-->
-            <a id="totop" href="#top">
-                <i class="fa fa-angle-up"></i>
-            </a>
-        <!--back-to-top end-->
+    <!--back-to-top start-->
+    <a id="totop" href="#top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!--back-to-top end-->
 
-    </div><!-- page end -->
+</div><!-- page end -->
         <!-- popup form-->
         <div class="modal fade" id="enquiry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -369,4 +382,5 @@
 
 </body>
 
+<!-- Mirrored from themetechmount.com/html/aqovo/{% url 'home' %} by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 08:40:47 GMT -->
 </html>

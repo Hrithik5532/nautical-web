@@ -2,7 +2,17 @@ from django.db import models
 from ckeditor.fields import RichTextField 
 
 from taggit.managers import TaggableManager
-# Create your models here.
+# Create your models here.\\
+
+import random
+import string
+
+def generate_uid():
+    # Generate a random UID with 6 characters
+    return ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+
+
+
 
 class Banner(models.Model):
     id = models.AutoField(primary_key=True)
@@ -55,6 +65,7 @@ class Skills(models.Model):
         return self.skill
     
 class JobPositions(models.Model):
+    uid = models.CharField(max_length=6,  default=generate_uid, editable=False)
     title = models.CharField(max_length=50)
     sub_title = models.CharField(max_length=50,null=True,blank=True)
     salary = models.CharField(max_length=50,null=True, blank=True)
@@ -67,3 +78,16 @@ class JobPositions(models.Model):
 
     def __str__(self) :
         return self.title
+    
+
+class ApplicationsForJob(models.Model):
+    JobPosition = models.ForeignKey(JobPositions,on_delete=models.CASCADE,editable=False)
+    name = models.CharField(max_length=100,editable=False)
+    email =models.EmailField(editable=False)
+    contact= models.CharField(max_length=15,editable=False)
+    experiance = models.CharField(max_length=50,editable=False)
+    expected_ctc = models.CharField(max_length=40,editable=False)
+    resume = models.FileField(upload_to='Job-applicants/',editable=False)
+
+    def __str__(self) -> str:
+        return self.name

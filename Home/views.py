@@ -31,7 +31,7 @@ def contact_us(request):
         ContactEnquires.objects.create(name=name,message=message,email=email,mobile_number=mobile,company_name=company).save()
 
         messages.success(request,'Thank You!')
-        return redirect('contact_us')
+        return redirect('home')
 
     return render(request,'html/contact-us.html',{'title':'Contact Us'})
 
@@ -94,9 +94,54 @@ def aboutUs(request):
      return render(request,'html/about-us-2.html')
 
 def career(request):
-     jobs = JobPositions.objects.all()[::-1]
-     return render(request,'html/career.html',{'jobs':jobs,'title':'Career with us'})
+     jobs = JobPositions.objects.order_by('-id').all()
+     skills = Skills.objects.all().distinct()
+     search = request.GET.get('search')
+     tag = request.GET.get('tag')
+     if search :
+            jobs = jobs.filter(
+                 Q(title__icontains=search) |
+            Q(sub_title__icontains=search) |
+            Q(details__icontains=search) |
+            Q(skills__skill__icontains=search)
+            )
+     elif tag:
+            jobs = jobs.filter(skills__skill=tag)
+            
+     page = request.GET.get('page')
+     paginator = Paginator(jobs, 2)
+     try:
+            jobs = paginator.page(page)
+     except PageNotAnInteger:
+                # If page is not an integer, deliver first page.
+            jobs = paginator.page(1)
+     except EmptyPage:
+                # If page is out of range (e.g. 9999), deliver last page of results.
+            jobs = paginator.page(paginator.num_pages)
+
+     return render(request,'html/career.html',{'jobs':jobs,'title':'Career with us','skills':skills})
 
 def career_detail(request,slug):
      job = JobPositions.objects.get(title=slug)
-     return render(request,'html/career-detail.html',{'job':job,'title':job.title})
+     if request.method == 'POST':
+            id = request.POST.get('uid')
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            contact = request.POST.get('mobile')
+            experiance = request.POST.get('experiance')
+            ctc = request.POST.get('ctc')
+            file = request.FILES['file']
+            job = JobPositions.objects.get(uid = id)
+            if ApplicationsForJob.objects.filter(email=email,JobPosition=job).exists():
+                 messages.error(request,"You Application is already submitted ! ")
+                 return redirect('career_detail',job.title)
+            
+            applicant = ApplicationsForJob.objects.create(JobPosition=job,name=name,email=email,contact=contact,experiance=experiance,expected_ctc=ctc,resume=file)
+            applicant.save()
+            messages.success(request,"Application submitted")
+            return redirect('career_detail',job.title)
+     
+     applicant = ApplicationsForJob.objects.filter(JobPosition=job).count()
+     skills = Skills.objects.all().distinct()
+     
+     return render(request,'html/career-detail.html',{'job':job,'title':job.title,'applicant':applicant,'skills':skills})

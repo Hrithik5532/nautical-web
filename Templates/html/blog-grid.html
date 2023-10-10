@@ -94,8 +94,8 @@
                                 <!-- featured-imagebox-post -->
                                 <div class="featured-imagebox featured-imagebox-post style2">
                                     <div class="featured-imagebox-post-inner">
-                                        <div class="featured-thumbnail">
-                                            <a href="{% url 'article_details' i.name %}">  <img class="img-fluid" src="../../media/{{i.thumbnail}}"  alt="blog-img"></a> 
+                                    <div class="featured-thumbnail">
+                                        <a href="{% url 'article_details' i.name %}">  <img class="img-fluid" src="../../media/{{i.thumbnail}}"  alt="blog-img"></a> 
                                         </div>
                                         <div class="featured-content">
                                             <!-- ttm-box-post-date -->
@@ -170,9 +170,7 @@
                             </aside> {% endcomment %}
                         </div>
                         
-                        <nav aria-label="Page navigation example hide-mobile" style="display: flex !important;
-                        width: 100% !important;
-                        justify-content: center;">
+                        <nav aria-label="Page navigation example hide-mobile" style="display: flex !important;width: 100% !important;justify-content: center;">
                             {% if articles.has_other_pages %}
                              <ul class="pagination">
                                                     {% if articles.has_previous %}
