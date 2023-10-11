@@ -3,7 +3,96 @@
 {% load static %}
 {% block body %}
 
+<style>
+    @media (min-width: 1200px)  {
+        .target-indm{
+            display : none !important;
+    
+        }
+        .slick_slider .slick-arrow {
+            height: 71px ;
+            width: 58px ;
+        }
+        .slick_slider.slick-arrows-style2 .slick-prev {
+            left: 55%;
+        }
+        .slick_slider.slick-arrows-style2 .slick-next {
+            right: 35%;
+            
+        }
+    }
+        @media  (min-width: 800px) and (max-width: 1200px) {
+            .target-indm{
+                display : none !important;
+        
+            }
+            .slick_slider .slick-arrow {
+                height: 71px ;
+                width: 58px ;
+            }
+            .slick_slider.slick-arrows-style2 .slick-prev {
+                left: 65%;
+            }
+            .slick_slider.slick-arrows-style2 .slick-next {
+                right: 15%;
+                
+            }
+    }
+    @media  (min-width: 530px) and (max-width: 800px) {
+        .target-indm{
+            display : flex !important;
+    
+        }
+        .target-ind{
+            display :none !important;
+        }
+        .slick_slider .slick-arrow {
+            height: 61px ;
+            width: 50px ;
+        }
+        .slick_slider.slick-arrows-style2 .slick-prev {
+            left: 65%;
+        }
+        .slick_slider.slick-arrows-style2 .slick-next {
+            right: 15%;
+            
+        }
+}
+@media    (max-width: 530px) {
+    .target-indm{
+        display : flex !important;
 
+    }
+    .target-ind{
+        display : none !important;
+    }
+    .slick_slider .slick-arrow {
+        height: 61px ;
+        width: 50px ;
+    }
+    .slick-prev {
+       
+        position: static;
+    }
+    .slick-prev{
+        margin-left: 7rem !important;
+        background-color:#009599 !important;
+        color:white !important;
+    }
+    .slick-next{
+        position:none;
+        right: 7rem !important;
+        background-color:#009599 !important;
+        color:white !important;
+    }
+    .slick_slider.slick-arrows-style2 .slick-arrow {
+        top: 0px;
+        box-shadow: unset;
+    }
+}
+
+
+</style>
          <!-- Banner -->
         <div class="banner_slider_wrapper">
             <div class="banner_slider banner_slider_3 banner_slider_3_overlay">
@@ -473,10 +562,9 @@
             <section class="ttm-row about-section clearfix">
                 <div class="container">
                     <!-- row -->
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-7 col-sm-8 ">
+                    <div class="target-ind align-items-center d-flex">
+                        <div class="col-lg-6 col-md-5 col-sm-4">
                             <div class="d-flex">
-                                <div class="p-10 margin_right10 ttm-bgcolor-grey"></div>
                                 <div class="ttm_single_image-wrapper">
                                     <img class="img-fluid" src="{% static 'images/single-img-01.jpg' %}" alt="single-01">
                                 </div>
@@ -526,6 +614,62 @@
                             </div>
                         </div>
                     </div><!-- row end -->
+                    <div class="target-indm align-items-center row justify-content-center">
+                        <div class="col-lg-6 col-md-6 col-sm-8">
+                            <div class="d-flex ">
+                                <div class="ttm_single_image-wrapper">
+                                    <img class="img-fluid" src="{% static 'images/single-img-01.jpg' %}" alt="single-01">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-center">
+                            <div class="margin_top15 res-991-margin_top50">
+                                <!-- section title -->
+                                <div class="section-title">
+                                    <div class="title-header d-flex justify-content-center">
+                                        <h2 class="title">Target Industries</h3>
+                                    </div>
+                                    <div class="title-desc d-flex justify-content-center">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey fs-15" style="display: flex;
+                                                flex-direction: column;
+                                                align-items: center;">
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                     <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">We Serving Up Seaweed</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor ttm-textcolor-darkgrey fs-15" style="display: flex;
+                                                flex-direction: column;
+                                                align-items: center;">
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">The Asia Leads the Way</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">A Feeding Farmed Fish</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">New Options From Startups</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Taking Aquaculture Further</span></li>
+                                                    <li><i class="ti ti-arrow-circle-right"></i><span class="ttm-list-li-content">Tackling a Seafood Deficit</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- section title end -->
+                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark  margin_top15" href="{% url 'contact_us' %}">contact us</a>
+                                <div class="ttm-horizontal_sep width-100 margin_top40 margin_bottom30"></div>
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--about-section end-->
@@ -565,7 +709,7 @@
                             </div><!-- section title end -->
                         </div>
                     </div>
-                    <div class="row slick_slider padding_bottom5" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":false, "infinite":true, "responsive": [{"breakpoint":1024,"settings":{"slidesToShow": 3}} , {"breakpoint":900,"settings":{"slidesToShow": 2}}, {"breakpoint":575,"settings":{"slidesToShow": 1}}]}'>
+                    <div class="row">
                         {% for article in articles %}
                         
                         <div class="col-lg-4">

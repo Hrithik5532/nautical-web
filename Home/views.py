@@ -11,7 +11,7 @@ from django.contrib import messages #import messages
 def home(request):
     banner_img = Banner.objects.all()[::-1]
     services = Services.objects.all()
-    articles = Articles.objects.order_by('-id')[1:4]
+    articles = Articles.objects.order_by('-id')[0:3]
     return render(request,"html/index.html",{'title':'Home','banner_img':banner_img,'services':services,'articles':articles})
 
 def services(request):

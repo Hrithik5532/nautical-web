@@ -1023,11 +1023,6 @@
         font-size: 38px;
         line-height: 41px;
     }
-    .slick_slider .slick-arrow,
-    .slick_slider .slick-dot {
-        display: none;
-        visibility: hidden;
-    }
 }
 
 @media (max-width: 650px) {

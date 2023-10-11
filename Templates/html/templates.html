@@ -39,7 +39,54 @@
     .tooltip-topf i{
         font-size: 25px;
     }
-    </style>
+
+    @media only screen and (min-width:1000px){
+        .mobile-footer{
+            display: none !important;
+        }
+    }
+    @media only screen and (max-width:1000px){
+        .desktop-footer{
+            display: none !important;
+        }
+    }
+    @media only screen and (max-width:740px){
+        .mobile-footer .container .col-4{
+            display: none;
+        }
+        .icons-mobile-footer{
+            display: flex !important;
+        }
+        .tooltip-topf i {
+            font-size: 37px;
+        }
+        .mobile-footer-ul li{
+            margin: 0px 12px !important;
+        }
+    }
+    @media (min-width:450px) and (max-width:700px){
+        .mobile-footer-contact{
+            display:none;
+        }
+        .tooltip-topf i {
+            font-size: 35px;
+        }
+        .mobile-footer-ul li{
+            margin: 0px 25px !important;
+        }
+    }
+    @media (min-width:320px) and (max-width:450px){
+        .mobile-footer-contact{
+            display:none;
+        }
+        .tooltip-topf i {
+            font-size: 30px;
+        }
+        .mobile-footer-ul li{
+            margin: 0px 10px !important;
+        }
+    }
+</style>
 
 <body>
 
@@ -73,11 +120,9 @@
                                 </div>
                                 <div class="d-flex align-items-center m-auto">
                                     <div class="d-flex align-items-center">
-                                        <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-white ttm-icon_element-size-xs ttm-icon_element-style-round margin_bottom0">
-                                            <i class="flaticon flaticon-call"></i>
-                                        </div>
-                                        <div class="padding_left20">
-                                            <h6 class="fs-16 font-weight-normal margin_bottom0">Call Us</h6>
+                                        
+                                        <div class="padding_left20 d-flex">
+                                            <h6 class="fs-16 font-weight-normal margin_bottom0 mr-2">Call Us</h6>
                                             <h5 class="fs-18 margin_bottom0">+123 795 9841</h5>
                                         </div>
                                     </div>
@@ -179,7 +224,7 @@
 
         <!--footer start-->
         <footer class="footer widget-footer ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
-            <div class="second-footer">
+            <div class="second-footer desktop-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
@@ -231,7 +276,94 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 widget-area">
+                            <div class="widget widget_cta clearfix">
+                                <h3 class="widget-title">Quick Contacts</h3>
+                                <p>If you have any questions or need help</p>
+                                <div class="d-flex">
+                                    <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
+                                        <i class="flaticon flaticon-call"></i>
+                                    </div>
+                                    <h4>+912261237777</h4>
+                                </div>
+                                <p>3, Victory Mansion, 2nd Floor, Sitladevi temple Road, Opp. Union bank Of India, Mahim (W), Mumbai - 400 016.</p>
+                                <div class="d-inline-table align-items-center justify-content-between">
+                                    <a class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5" href="https://www.google.com/maps/dir//Nautical+Marine+Management+Services+Pvt.+Ltd.+Victory+Mansion+Sitladevi+Temple+Road,+New+Girgaonkar+Wadi,+New+Dinkar+Co+Operative+Housing+Society,+Mahim+Mumbai,+Maharashtra+400016/@19.0353692,72.8445053,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3be7ced348dbaaab:0xbd443d5709a904e3">Get direction <i class="fa fa-chevron-right"></i></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-footer mobile-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class='col-4'>
+                            <div class="widget widget_text clearfix">
+                                <div class="footer-logo d-flex">
+                                    <img id="logo-img" height="50" width="80" class="img-fluid auto_size"  src="{% static 'custom-images/logo.png' %}" alt="logo-img">
+                                    <div class="d-flex mt-3 " style="flex-direction: column;
+                                    text-align: justify;">
+
+                                        <h6 class="m-0">Nautical Marine </h6>
+                                        <h6 class="m-0">Management </h6>
+                                        <h6>Services</h6>
+                                    </div>
+                                </div>
+                                <div class="textwidget widget-text">
+                                    <ul class="social-icons list-inline top-social-icons ">
+                                      
+
+                                        <li class="f-icon top-share-icon "><a class="tooltip-topf text" href="#" rel="noopener" ><i class="fa fa-facebook"></i></a></li>
+                                        <li class="top-share-icon"><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-twitter"></i></a></li>
+                                        <li class="top-share-icon" ><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-flickr"></i></a></li>
+                                        <li class="top-share-icon" ><a class="tooltip-topf" href="https://www.linkedin.com/showcase/nautical-global-ship-management/" target="_blank" rel="noopener" ><i class="fa fa-linkedin"></i></a></li>
+
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-4'>
+                            <div class="widget widget_nav_menu clearfix">
+                               <h3 class="widget-title">Services</h3>
+                               <ul id="menu-footer-quick-links" class="menu">
+                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    <li><a href="#">Our CLinic</a></li>
+                                    <li><a href="#">Our Doctors</a></li>
+                                    <li><a href="#">News & Media</a></li>
+                                    <li><a href="#">Appointments</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='col-4'>
+                            <div class="widget widget_nav_menu clearfix">
+                               <h3 class="widget-title">Links</h3>
+                               <ul id="menu-footer-quick-links" class="menu">
+                                   <li><a href="{% url 'home' %}">Home</a></li>
+                                   <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                   <li><a href="{% url 'services' %}">Services</a></li>
+                                   <li><a href="{% url 'articles' %}">Articles</a></li>
+                                    <li><a href="{% url 'career' %}">Career </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 icons-mobile-footer d-none justify-content-center ">
+
+                            <div class="textwidget widget-text  ">
+                                <ul class="social-icons list-inline top-social-icons mobile-footer-ul">
+                                    
+                                    
+                                    <li class="f-icon top-share-icon "><a class="tooltip-topf text" href="#" rel="noopener" ><i class="fa fa-facebook"></i></a></li>
+                                    <li class="top-share-icon"><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-twitter"></i></a></li>
+                                    <li class="top-share-icon" ><a class="tooltip-topf" href="#" rel="noopener" ><i class="fa fa-flickr"></i></a></li>
+                                    <li class="top-share-icon" ><a class="tooltip-topf" href="https://www.linkedin.com/showcase/nautical-global-ship-management/" target="_blank" rel="noopener" ><i class="fa fa-linkedin"></i></a></li>
+                                    
+                                </ul> 
+                            </div>
+                        </div>
+                        <div class="mobile-footer-contact">
                             <div class="widget widget_cta clearfix">
                                 <h3 class="widget-title">Quick Contacts</h3>
                                 <p>If you have any questions or need help</p>
@@ -258,9 +390,8 @@
                             <div class="d-md-flex justify-content-between">
                                 <span class="cpy-text">Copyright © 2023 <a href="{% url 'home' %}" class="ttm-textcolor-skincolor font-weight-500">NMMS </a> All rights reserved.</span>
                                 <ul class="footer-nav-menu">
-                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
-                                    <li><a href="{% url 'career' %}">Career</a></li>
-                                    <li><a href="{% url 'services' %}">Services</a></li>
+                                    <span class="cpy-text">Design by - <a href="https://himanicc.com/" target="_blank" class="ttm-textcolor-skincolor font-weight-500">www.himanicc.com </a></span>
+
                                 </ul>
                             </div>
                         </div>
