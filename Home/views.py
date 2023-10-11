@@ -10,7 +10,9 @@ from django.contrib import messages #import messages
 
 def home(request):
     banner_img = Banner.objects.all()[::-1]
-    return render(request,"html/index.html",{'title':'Home','banner_img':banner_img})
+    services = Services.objects.all()
+    articles = Articles.objects.order_by('-id')[1:4]
+    return render(request,"html/index.html",{'title':'Home','banner_img':banner_img,'services':services,'articles':articles})
 
 def services(request):
     return render(request,'html/services.html',{'title':'Services'})

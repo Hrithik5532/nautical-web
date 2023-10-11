@@ -89,5 +89,16 @@ class ApplicationsForJob(models.Model):
     expected_ctc = models.CharField(max_length=40,editable=False)
     resume = models.FileField(upload_to='Job-applicants/',editable=False)
 
-    def __str__(self) -> str:
+    def __str__(self) :
         return self.name
+
+
+class Services(models.Model):
+    uid = models.CharField(max_length=6,  default=generate_uid, editable=False)
+    img = models.FileField(upload_to='Services/')
+    headline = models.CharField(max_length=100)
+    description = models.TextField()
+    content = RichTextField(blank=True,null=True)
+
+    def __str__(self):
+        return self.uid

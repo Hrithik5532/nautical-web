@@ -12,7 +12,7 @@ admin.site.register(ArticleCategory)
 admin.site.register(JobPositions)
 
 admin.site.register(Skills)
-
+admin.site.register(Services)
 
 
 class ApplicationsForJobAdmin(admin.ModelAdmin):
