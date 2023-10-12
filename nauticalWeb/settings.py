@@ -36,6 +36,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Error handlers
+handler404 = 'Home.views.custom_error_view'
+handler500 = 'Home.views.custom_error_view'
 
 # Application definition
 

@@ -11,6 +11,7 @@ urlpatterns = [
         path('About-us/',aboutUs,name="about_us"),
 
         path('career/',career,name="career"),
-        path('career/(?P<slug>[-a-zA-Z0-9_]+)\\Z',career_detail,name="career_detail")
-        
+        path('career/(?P<slug>[-a-zA-Z0-9_]+)\\Z',career_detail,name="career_detail"),
+            path('error/', custom_error_view, name='custom_error'),
+
 ]

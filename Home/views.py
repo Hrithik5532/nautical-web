@@ -147,3 +147,8 @@ def career_detail(request,slug):
      skills = Skills.objects.all().distinct()
      
      return render(request,'html/career-detail.html',{'job':job,'title':job.title,'applicant':applicant,'skills':skills})
+    
+
+def custom_error_view(request):
+    error_message = "An error occurred. Please check your request."
+    return render(request, 'html/error.html', {'error': error_message})
