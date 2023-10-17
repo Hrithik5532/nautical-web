@@ -131,16 +131,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/assets/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static/assets')
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 # Media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),  # Assuming your static files are in a 'static' folder within your project
-]# Default primary key field type
+ # Assuming your static files are in a 'static' folder within your project
+# Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
