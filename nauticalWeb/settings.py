@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 
 #static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),  # Assuming your static files are in a 'static' folder within your project
+    os.path.join(BASE_DIR, "collected_static"),  # Assuming your static files are in a 'static' folder within your project
 ]# Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
